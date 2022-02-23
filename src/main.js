@@ -18,6 +18,7 @@ function showPage2(){
     document.getElementById("pageTwo").style.display="block";
 }
 
+//AVANCE 
 /*function obtenerHtmlListado(){
 
   const filmsDiv = document.getElementById('listadoPeliculas')
