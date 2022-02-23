@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Data Lovers2</title>
+    <title>Data Lovers</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--hace que la pag sea responsive-->
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <p>hola chicassdfghjklñ</p>
+</head>
+
+<body>
+    <section id="pageOne">
+        <header id="titlePageOne">
+            <h1> <strong> Studio Ghibli</strong> </h1>
+        </header>
+        <main id="contentPageOne">
+            <div class="descriptionPageOne">
+                <p>Esta página web brinda información sobre los largometrajes animados, creados y producidos en
+                    el Studio Ghibli.</p>
+            </div>
+            <div id="contentInput">
+                <input id="userInput" type="text" placeholder=" Ingrese su nombre">
+                <button id="buttonAccess">ACCEDER</button>
+            </div>
+        </main>
+        <div id="greetingPageOne" style="display:none;">
+            <p>Hola <strong id="userName"></strong>!Ya puedes navegar en esta pagina web</p>
+        </div>
+    </section>
+
+    <section id="pageTwo" style="display:none;">
+        <p>Historia 2</p>
+    </section>
 
     <script src="main.js" type="module"></script>
-  </body>
+</body>
+
 </html>
