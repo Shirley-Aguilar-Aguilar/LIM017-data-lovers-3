@@ -1,13 +1,16 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
+export const filterData = (/*data,condition*/) => {
+  // return 'example'; recibe la data y devuelve los datos que cumpla con la condición.
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+export const sortData = (/*data,sortBy, sortOrder*/) => {
+  // return '';  data= datos sin orden  sortBy= con respecto a cual de los datos se va a ordenar  sortorder= forma de orden(ascendete, descendente, alfabeticamente)
 };
 
+export const computeStats = (/*data*/) => {
+  // return 'OMG'; data=datos sin orden   hace calculo en base a la data
+};
 
 //CONTENIDO SEGUN README
 
@@ -15,7 +18,7 @@ export const anotherExample = () => {
 FUNCIONES RECOMENDADAS
 -filterData(data,condition)---filtra data---retorna datos solicitados
 -sortData(data,sortBy, sortOrder)---ordena datos
--computeStats(data)---cálculos estadísticos básicos para ser mostrados de acuerdo a la data proporcionada.
+-computeStats(data)---cálculos estadísticos básicos para ser mostrados de acuerdo a la data proporcionada.()
 */ 
 
 
