@@ -28,26 +28,152 @@ body {
     font: bolder 8.2vh Helvetica;
     text-shadow: rgb(25, 104, 25) 5px 4px 3px;  
 }
-/*@media screen and (min-width: 800px) { responsive
-    .container {
-      margin: 1em 2em;
-    }
-  } */
 #contentPageOne{ /*contenedor*/
     display: flex; /*each one get the same amount of space in the screen*/
     flex-wrap: wrap-reverse; /*permite que los elementos esten en varios rows y ordena*/   
     flex-direction:column ;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;   
+}
+
+#contentPageOne{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-around;
+    align-items:center ;
+}
+.descriptionPageOne{
+  border-color: green ;
+    background-color: white;
+    font-size: 200% ;
+    text-align: center;
+    color: black;
+    width:16em;
+    border-radius: 30px;
+    border: 3px solid green;
+    box-shadow: rgb(25, 104, 25) 3px 3px 3px;;
+    margin-left: 10%;
+    padding: 1% 1% 1% 1%;
+    line-height: 1.7em;   
+}
+
+#contentInput{
+    display: flex;
+    flex-wrap:wrap-reverse;
+    flex-direction:column ;
+    justify-content: space-between;
+    align-items:center ;
     margin-right: 20%;
 }
-/*
-#descriptionPageOne 
-#contentInput /*contenedor
-#userInput
-#buttonAccess
-#greetingPageOne
-*/
+#userInput{
+    height: 3.5em;
+    width:23em;
+    margin-bottom: 10%;
+    border-radius: 40px;
+    text-align: center;
+    border: 2px solid green;
+    box-shadow: rgb(25, 104, 25) 3px 3px 3px;
+    font-size: larger;
+}
+#buttonAccess{
+    height: 3em;
+    width:12em;
+    color :white;
+    margin-bottom: 10%;
+    border-radius: 40px;
+    background-color: rgb(101, 66, 182);
+    border: 4px solid white ;
+    font-size: large;
+}
+#greetingPageOne{
+    display: flex;
+    flex-direction:column ;
+    align-items:center ;
+    border-color: green ;
+    border-radius: 40px;
+    color: rgb(13, 70, 13);
+    width:14em;
+    padding: 2% 2% 2% 2%;
+    margin-left: 35%;
+    line-height: 1.7em;
+    background-color: white;
+    font-size: 250% ;
+    color: black;
+}
+
+/*usando media queries para característica responsiva Historia 1*/
+
+@media screen and (max-width: 1400px){ 
+  #titlePageOne{
+    margin-bottom: 4%;
+  }
+  .descriptionPageOne{
+      font-size: 170% ;
+      width:15em; 
+      margin-right: 15%;
+      margin-bottom: 15%;
+  } 
+  #contentInput{
+      margin-right: 5%;
+      margin-bottom: 6%;
+  }
+   #userInput{
+      height: 2.9em;
+      width:16em;
+      margin-bottom: 10%;
+  }
+  #greetingPageOne{
+    border-radius: 30px;
+    width:10em;
+    line-height: 1.3em;
+    font-size: 220% ;
+    justify-content: center;
+    }
+  
+}
+@media screen and (max-width: 650px){ 
+  #greetingPageOne{
+    border-radius: 25px;
+    width:8em;
+    margin-left: 20%;
+    line-height: 1.1em;
+    font-size: 170% ;
+    justify-content: center;
+    margin-bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 450px){ 
+  #titlePageOne{
+    font: bolder 7vh Helvetica;
+    text-align: center;
+    margin-bottom: 15%;
+  }
+  .descriptionPageOne{
+      font-size: 120% ;
+      width:15em;
+      line-height: 1.5em;   
+      margin-right: 8%;
+  }
+  #contentInput{
+      margin-right: 5%;
+  }
+  #userInput{
+      height: 2.7em;
+      width:13.5em;
+      margin-bottom: 10%;
+  }
+  #buttonAccess{
+      height: 2.5em;
+      width:8.5em;
+      margin-bottom: 23%;
+      border-radius: 30px;
+      font-size: medium; 
+  }
+}
+
+
+
 #pageTwo{
     background: url(fondo2.jpg) no-repeat center center;
     height: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
