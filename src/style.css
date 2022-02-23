@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* how padding and border are added to the element,
+  content box adds to the orginal size
+  border box mantains the original size*/
+}
+body {
+    height: 100vh; 
+    width: 100vw;/* 100% visible part of the page
+    vh = 1% viewpoint height or avaliable height space,
+    vw = 1% viewpoint width*/
+}
+#pageOne{
+    background: url(fondo1.jpg) no-repeat center center; /* la imagen a ser mostrada a pantalla completa */
+    height: 100%;
+    width: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
+    background-size: cover; /* Propiedad a utilizar para la imagen */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#titlePageOne{
+    color: white;
+    text-align: center;
+    padding-top: 7%;
+    margin-bottom: 8%;
+    -webkit-text-stroke: 2px rgb(26, 83, 26) ;
+    font: bolder 8.2vh Helvetica;
+    text-shadow: rgb(25, 104, 25) 5px 4px 3px;  
+}
+/*@media screen and (min-width: 800px) { responsive
+    .container {
+      margin: 1em 2em;
+    }
+  } */
+#contentPageOne{ /*contenedor*/
+    display: flex; /*each one get the same amount of space in the screen*/
+    flex-wrap: wrap-reverse; /*permite que los elementos esten en varios rows y ordena*/   
+    flex-direction:column ;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20%;
+}
+/*
+#descriptionPageOne 
+#contentInput /*contenedor
+#userInput
+#buttonAccess
+#greetingPageOne
+*/
+#pageTwo{
+    background: url(fondo2.jpg) no-repeat center center;
+    height: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
+    width: 100%;
+    background-size: cover; 
+}
+
+
+
+
+
+
+
+
+
+/*especificidad
+++++ style in line
++++id selector(#id)
+++class selector, atribute selector y pseudo-class
++element selector or pseudo-element*/
