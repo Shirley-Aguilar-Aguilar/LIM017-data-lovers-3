@@ -22,23 +22,17 @@ body {
 #titlePageOne{
     color: white;
     text-align: center;
-    padding-top: 7%;
-    margin-bottom: 8%;
+    padding-top: 5%;
+    margin-bottom: 12%;
     -webkit-text-stroke: 2px rgb(26, 83, 26) ;
     font: bolder 8.2vh Helvetica;
     text-shadow: rgb(25, 104, 25) 5px 4px 3px;  
-}
-#contentPageOne{ /*contenedor*/
-    display: flex; /*each one get the same amount of space in the screen*/
-    flex-wrap: wrap-reverse; /*permite que los elementos esten en varios rows y ordena*/   
-    flex-direction:column ;
-    justify-content: space-between;
-    align-items: center;   
 }
 
 #contentPageOne{
     display: flex;
     flex-direction:row ;
+    flex-wrap: wrap-reverse;
     justify-content: space-around;
     align-items:center ;
 }
@@ -52,7 +46,7 @@ body {
     border-radius: 30px;
     border: 3px solid green;
     box-shadow: rgb(25, 104, 25) 3px 3px 3px;;
-    margin-left: 10%;
+    margin-left: 14%;
     padding: 1% 1% 1% 1%;
     line-height: 1.7em;   
 }
@@ -110,11 +104,12 @@ body {
   .descriptionPageOne{
       font-size: 170% ;
       width:15em; 
-      margin-right: 15%;
-      margin-bottom: 15%;
+      margin-right: 18%;
+      margin-bottom: 10%;
+      margin-top: 6%;
   } 
   #contentInput{
-      margin-right: 5%;
+      margin-right: 9%;
       margin-bottom: 6%;
   }
    #userInput{
@@ -128,6 +123,14 @@ body {
     line-height: 1.3em;
     font-size: 220% ;
     justify-content: center;
+    }
+    #buttonAccess{
+        height: 2.5em;
+        width:11em;
+        border-radius: 30px;
+
+        border: 3px solid white ;
+        font-size: medium;
     }
   
 }
@@ -153,10 +156,10 @@ body {
       font-size: 120% ;
       width:15em;
       line-height: 1.5em;   
-      margin-right: 8%;
+      margin-right: 12%;
   }
   #contentInput{
-      margin-right: 5%;
+      margin-right: 1%;
   }
   #userInput{
       height: 2.7em;
