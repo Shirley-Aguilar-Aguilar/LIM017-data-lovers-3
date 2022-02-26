@@ -184,6 +184,96 @@ body {
     background-size: cover; 
 }
 
+/* creando diseño para historia 3 */
+#headerPageTwo{
+    background-color:blanchedalmond;
+    height: 100px;
+    padding: 0 50px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#logo{
+    height: 70px;
+    width: 140px;
+}
+.menu a{
+    color: black;
+    text-decoration: none;
+    padding: 0 10px;
+    /*transition: 0.3s;*/
+}
+.show-menu,
+.hide-menu{
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+
+}
+
+.show-menu{
+    order:1;
+
+}
+
+.menu a:hover,
+.show-menu:hover,
+.hide-menu:hover{
+    color:blue;
+}
+
+#check{
+    display: none;
+}
+
+/*RESPONSIVE*/
+@media(max-width: 768px){
+    /*HEADER*/
+    .show-menu,
+    .hide-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width:100%;
+        height: 100vh;
+        background-color: blanchedalmond;
+        left: 0 ;
+        /* right:-100%;*/
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index:100;
+        transition:0.8s;
+
+    }
+    .menu a{
+        display:block;
+        padding: 20px;
+
+    }
+    .hide-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0 ;
+    }
+
+}
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,5 @@
-//import { filterData, sortData, computeStats } from './data.js';
-// import films from './data/ghibli/ghibli.js';
+//import { filterData /*sortData, computeStats*/ } from './data.js';
+//import films from './data/ghibli/ghibli.js';
 
 const buttonAccess = document.getElementById("buttonAccess");
 buttonAccess.addEventListener("click", showPage);
@@ -9,12 +9,20 @@ function showPage(){
     document.getElementById("greetingPageOne").style.display="block";
     let inputName = document.getElementById("userInput").value;
     document.getElementById("userName").innerText = inputName ;
-    setTimeout(showPage2, 4000);
+    setTimeout(showPage2, 2000);
 }
 function showPage2(){
     document.getElementById("pageOne").style.display="none";
     document.getElementById("pageTwo").style.display="block";
+   
+  
 }
+ 
+
+
+
+
+
 
 //AVANCE 
 /*function obtenerHtmlListado(){
