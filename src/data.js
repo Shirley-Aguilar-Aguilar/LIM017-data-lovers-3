@@ -1,7 +1,9 @@
 // estas funciones son de ejemplo
 
-export const filterData = (/*data,condition*/) => {
+export const filterData = (/*films,condition*/) => {
   // return 'example'; recibe la data y devuelve los datos que cumpla con la condición.
+  
+  
 };
 
 export const sortData = (/*data,sortBy, sortOrder*/) => {
