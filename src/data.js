@@ -49,7 +49,7 @@ export const sortDataDirectors = (data, sortOrder) => {
 
 //ordenar por productores
 //ordenar por directores
-export const sortDataDirectors = (data, sortOrder) => {
+export const sortDataProducers = (data, sortOrder) => {
   let sortBy;
   if (sortOrder === 'az') {
     sortBy = data.sort((a, b) => {
