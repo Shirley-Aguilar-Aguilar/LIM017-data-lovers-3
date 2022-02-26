@@ -265,16 +265,13 @@ body {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
+#contentPageTwo{
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    align-items:center ;
+}
 
 
 
