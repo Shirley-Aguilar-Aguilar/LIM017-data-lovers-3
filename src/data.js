@@ -3,18 +3,26 @@ export const filterData = (data,condition) => {
     return data[condition]
   // return '';  data= datos sin orden  sortBy= con respecto a cual de los datos se va a ordenar  sortorder= forma de orden(ascendete, descendente, alfabeticamente)
 };
-export const sortData = (data, sortBy/*, sortOrder*/) => {
+export const sortData = (data, sortBy, sortOrder) => {
   // return '';  data= datos sin orden  sortBy= con respecto a cual de los datos se va a ordenar  sortorder= forma de orden(ascendete, descendente, alfabeticamente)
   let stringdata = JSON.stringify(data);
   let stringdataParse = JSON.parse(stringdata);
   //ordenando objetos por title
-  return stringdataParse.sort(GetSortOrder(sortBy));
-
+  if (sortOrder === ORDER_ASCENDENTE) {
+    return stringdataParse.sort(getSortOrderAsc(sortBy));
+  } else if (sortOrder === ORDER_DESCENDENTE){
+    return stringdataParse.sort(getSortOrderDesc(sortBy));
+  } else {
+    console.log("error de configuración en la función sortData, sortOrder :" + sortOrder );
+  }
 };
 
 export const computeStats = (/*data*/) => {
   // return 'OMG'; data=datos sin orden   hace calculo en base a la data
 };
+
+export const ORDER_ASCENDENTE = "asc";
+export const ORDER_DESCENDENTE = "des";
 
 //CONTENIDO SEGUN README
 
@@ -25,7 +33,7 @@ FUNCIONES RECOMENDADAS
 -computeStats(data)---cálculos estadísticos básicos para ser mostrados de acuerdo a la data proporcionada.()
 */
 
-function GetSortOrder(prop) {    
+function getSortOrderAsc(prop) {    
   return function(a, b) {    
       if (a[prop] > b[prop]) {    
           return 1;    
@@ -36,5 +44,15 @@ function GetSortOrder(prop) {
   }    
 } 
 
+function getSortOrderDesc(prop) {    
+  return function(a, b) {    
+      if (a[prop] < b[prop]) {    
+          return 1;    
+      } else if (a[prop] > b[prop]) {    
+          return -1;    
+      }    
+      return 0;    
+  }    
+} 
 
 

@@ -1,5 +1,6 @@
 import data from './data/ghibli/ghibli.js';
 import { filterData, sortData } from './data.js';
+import { ORDER_ASCENDENTE } from './data.js';
 
 const arrayFilms = data.films;
 const buttonAccess = document.getElementById("buttonAccess");
@@ -40,7 +41,7 @@ function showFilms(dataToPrint){
 }
 
 function filterDataByMovieTitleAsc(){
-  let orderData = sortData(data.films, "title");
+  let orderData = sortData(data.films, "title", ORDER_ASCENDENTE);
 
   //limpiar el div contentPageTwo
   const filmsDiv = document.getElementById("contentPageTwo");
