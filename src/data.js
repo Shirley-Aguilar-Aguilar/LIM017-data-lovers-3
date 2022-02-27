@@ -3,12 +3,12 @@ export const filterData = (data,condition) => {
     return data[condition]
   // return '';  data= datos sin orden  sortBy= con respecto a cual de los datos se va a ordenar  sortorder= forma de orden(ascendete, descendente, alfabeticamente)
 };
-export const sortData = (data/*,sortBy, sortOrder*/) => {
+export const sortData = (data, sortBy/*, sortOrder*/) => {
   // return '';  data= datos sin orden  sortBy= con respecto a cual de los datos se va a ordenar  sortorder= forma de orden(ascendete, descendente, alfabeticamente)
   let stringdata = JSON.stringify(data);
   let stringdataParse = JSON.parse(stringdata);
   //ordenando objetos por title
-  return stringdataParse.sort(GetSortOrder("title"));
+  return stringdataParse.sort(GetSortOrder(sortBy));
 
 };
 

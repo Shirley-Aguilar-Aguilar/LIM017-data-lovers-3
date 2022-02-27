@@ -40,7 +40,7 @@ function showFilms(dataToPrint){
 }
 
 function filterDataByMovieTitleAsc(){
-  let orderData = sortData( data.films);
+  let orderData = sortData(data.films, "title");
 
   //limpiar el div contentPageTwo
   const filmsDiv = document.getElementById("contentPageTwo");
