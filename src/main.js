@@ -1,6 +1,5 @@
-//import { filterData, sortData, computeStats } from './data.js';
 import data from './data/ghibli/ghibli.js';
-import { filterData } from './data.js';
+import { filterData, sortData } from './data.js';
 
 const arrayFilms = data.films;
 const buttonAccess = document.getElementById("buttonAccess");
@@ -41,29 +40,15 @@ function showFilms(dataToPrint){
 }
 
 function filterDataByMovieTitleAsc(){
-  let stringdata = JSON.stringify(data);
-  let stringdataParse = JSON.parse(stringdata);
-  //ordenando objetos por title
-  var orden = stringdataParse.films.sort(GetSortOrder("title"));
+  let orderData = sortData( data.films);
 
- //limpiar el div contentPageTwo
+  //limpiar el div contentPageTwo
   const filmsDiv = document.getElementById("contentPageTwo");
   filmsDiv.innerHTML = "";
 
   //pintar los objetos ya ordenados
-  showFilms(orden);
+  showFilms(orderData);
 }
-
-function GetSortOrder(prop) {    
-  return function(a, b) {    
-      if (a[prop] > b[prop]) {    
-          return 1;    
-      } else if (a[prop] < b[prop]) {    
-          return -1;    
-      }    
-      return 0;    
-  }    
-} 
 
 let buttonFilterByMovieTitleAsc = document.getElementById("filterDataByMovieTitleAsc");
 buttonFilterByMovieTitleAsc.addEventListener("click",filterDataByMovieTitleAsc)
