@@ -1,4 +1,5 @@
 import { filterData, sortData, computeStats } from '../src/data.js';
+import data from '../src/data/ghibli/ghibli.js'; //'../ ./data/ghibli/ghibli.js';
 
 
 describe('filterData', () => {
@@ -6,16 +7,16 @@ describe('filterData', () => {
     expect(typeof filterData).toBe('function');
   });
 
-  it('returns `filterData`', () => {
-    expect(filterData()).toBe('example');
+  it('returns `filterData by title`', () => {
+    expect(filterData( data.films[0], "title")).toBe("Castle in the Sky");
   });
 
-  it('returns `filterData`', () => {
-    expect(filterData()).toBe('example');
+  it('returns `filterData by director `', () => {
+    expect(filterData(data.films[1], "director")).toBe("Hayao Miyazaki");
   });
 
-  it('returns `filterData`', () => {
-    expect(filterData()).toBe('example');
+  it('returns `filterData by release date`', () => {
+    expect(filterData(data.films[1],"release_date")).toBe("1988");
   });
 });
 
