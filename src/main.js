@@ -1,8 +1,8 @@
 //import { filterData, sortData, computeStats } from './data.js';
 import data from './data/ghibli/ghibli.js';
+import { filterData } from './data.js';
 
 const arrayFilms = data.films;
-
 const buttonAccess = document.getElementById("buttonAccess");
 buttonAccess.addEventListener("click", showPage);
 
@@ -22,71 +22,36 @@ function showPage2() {
 function showFilms(dataToPrint){
   const filmsDiv = document.getElementById("contentPageTwo");
   let allFilms='';
+
   for (let i=0;i< dataToPrint.length ; i++){
     let filmDiv = '<div>'
-
-    filmDiv = filmDiv + '<img src="'+ dataToPrint[i].poster +'">'
+    filmDiv = filmDiv + '<img src="'+ filterData(dataToPrint[i], "poster") + '">';
     filmDiv = filmDiv + '<h2>'
-    filmDiv = filmDiv + dataToPrint[i].title +'<br>';
+    filmDiv = filmDiv + filterData(dataToPrint[i], "title") +'<br>';  
     filmDiv = filmDiv + '</h2>'
     filmDiv = filmDiv + '<h4>'
-    filmDiv = filmDiv + dataToPrint[i].director +'<br>';
-    filmDiv = filmDiv + dataToPrint[i].producer +'<br>'; 
-    filmDiv = filmDiv + dataToPrint[i].release_date +'<br>';
+    filmDiv = filmDiv + filterData(dataToPrint[i], "director") +'<br>';
+    filmDiv = filmDiv + filterData(dataToPrint[i], "producer")+'<br>'; 
+    filmDiv = filmDiv + filterData(dataToPrint[i], "release_date") +'<br>';
     filmDiv = filmDiv + '</h4>'
     filmDiv = filmDiv + '</div>'
-
     allFilms = filmDiv + allFilms
   }
   filmsDiv.innerHTML = allFilms;
 }
 
 function filterDataByMovieTitleAsc(){
-  
-  //console.log("datadata : " + data);
-
   let stringdata = JSON.stringify(data);
-  //console.log("datadata stringdata : " + stringdata);
-
   let stringdataParse = JSON.parse(stringdata);
-
- // console.log("datadata stringdataParse : " + stringdataParse);
-  
-  //console.log("filterDataByMovieTitleAsc : " + stringdataParse.films.sort(GetSortOrder("title")));
+  //ordenando objetos por title
   var orden = stringdataParse.films.sort(GetSortOrder("title"));
-  console.log("orden : " + orden);
 
- //limpiar
+ //limpiar el div contentPageTwo
   const filmsDiv = document.getElementById("contentPageTwo");
   filmsDiv.innerHTML = "";
-  //return stringdataParse.films.sort(GetSortOrder("title"));
 
-  //pintar
+  //pintar los objetos ya ordenados
   showFilms(orden);
-  /* let allFilms="";
-  for (let i=0;i< orden.length ; i++){
-    console.log("--> orden[i].title : " + orden[i].title);
-
-    let filmDiv = ' <div>'
-
-    filmDiv = filmDiv + '<img src="'+ orden[i].poster +'">'
-    filmDiv = filmDiv + '<h2>'
-    filmDiv = filmDiv + orden[i].title +'<br>';
-    filmDiv = filmDiv + '</h2>'
-    filmDiv = filmDiv + '<h4>'
-    filmDiv = filmDiv + orden[i].director +'<br>';
-    filmDiv = filmDiv + orden[i].producer +'<br>'; 
-    filmDiv = filmDiv + orden[i].release_date +'<br>';
-    filmDiv = filmDiv + '</h4>'
-    filmDiv = filmDiv + '</div>'
-
-    allFilms = filmDiv + allFilms
-  }
- 
-
-  filmsDiv.innerHTML = allFilms; */
-
-
 }
 
 function GetSortOrder(prop) {    
@@ -99,7 +64,6 @@ function GetSortOrder(prop) {
       return 0;    
   }    
 } 
-
 
 let buttonFilterByMovieTitleAsc = document.getElementById("filterDataByMovieTitleAsc");
 buttonFilterByMovieTitleAsc.addEventListener("click",filterDataByMovieTitleAsc)
