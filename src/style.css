@@ -243,7 +243,24 @@ body {
     display: block;
 }
 
+#contentPageTwo{
+    display: flex;
+    flex-direction:row-reverse ;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    align-items:center;
+}
 
+#contentPageTwo > div{
+    width: 20%;
+    text-align: center;
+ }
+
+ img{
+     height: 200px;
+     width: 130px;
+ }
+ 
 /*RESPONSIVE*/
 @media(max-width: 768px){
     /*HEADER*/
@@ -289,13 +306,6 @@ body {
 
 }
 
-#contentPageTwo{
-    display: flex;
-    flex-direction:row-reverse ;
-    flex-wrap: wrap-reverse;
-    justify-content: space-around;
-    align-items:center ;
-}
 
 /*especificidad
 ++++ style in line
