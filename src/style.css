@@ -272,7 +272,16 @@ body {
     justify-content: space-around;
     align-items:center ;
 }
+ul{
+    list-style: none;
+}
 
+.menu li ul{
+    display: none;
+}
+.menu li:hover > ul {
+    display: block;
+}
 
 
 

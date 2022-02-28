@@ -16,22 +16,8 @@ export const sortData = (data, sortBy, sortOrder) => {
     console.log("error de configuración en la función sortData, sortOrder :" + sortOrder );
   }
 };
-
-export const computeStats = (/*data*/) => {
-  // return 'OMG'; data=datos sin orden   hace calculo en base a la data
-};
-
 export const ORDER_ASCENDENTE = "asc";
 export const ORDER_DESCENDENTE = "des";
-
-//CONTENIDO SEGUN README
-
-/*
-FUNCIONES RECOMENDADAS
--filterData(data,condition)---filtra data---retorna datos solicitados
--sortData(data,sortBy, sortOrder)---ordena datos
--computeStats(data)---cálculos estadísticos básicos para ser mostrados de acuerdo a la data proporcionada.()
-*/
 
 function getSortOrderAsc(prop) {    
   return function(a, b) {    
@@ -54,5 +40,22 @@ function getSortOrderDesc(prop) {
       return 0;    
   }    
 } 
+
+export const computeStats = (/*data*/) => {
+  // return 'OMG'; data=datos sin orden   hace calculo en base a la data
+};
+
+
+
+//CONTENIDO SEGUN README
+
+/*
+FUNCIONES RECOMENDADAS
+-filterData(data,condition)---filtra data---retorna datos solicitados
+-sortData(data,sortBy, sortOrder)---ordena datos
+-computeStats(data)---cálculos estadísticos básicos para ser mostrados de acuerdo a la data proporcionada.()
+*/
+
+
 
 
