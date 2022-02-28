@@ -267,12 +267,21 @@ body {
 }
 #contentPageTwo{
     display: flex;
-    flex-direction:row ;
+    flex-direction:row-reverse ;
     flex-wrap: wrap-reverse;
     justify-content: space-around;
     align-items:center ;
 }
+ul{
+    list-style: none;
+}
 
+.menu li ul{
+    display: none;
+}
+.menu li:hover > ul {
+    display: block;
+}
 
 
 
