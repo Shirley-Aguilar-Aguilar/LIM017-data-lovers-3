@@ -232,12 +232,13 @@ body {
     text-decoration: none;
     color: #191C26;
     padding: 5px 10px;
-    background-color:blanchedalmond;
+    /* background-color:blanchedalmond; */
 }
 .menu ul li ul {
     display: none;
     position: absolute;
     width: 120px;
+    background-color:sandybrown
 }
 .menu ul li a:hover + ul, .menu ul li ul:hover {
     display: block;
@@ -300,9 +301,9 @@ body {
         top: 40px;
         right: 40px;
     }
-    #check:checked ~ .menu{
+    /* #check:checked ~ .menu{
         right: 0 ;
-    }
+    } */
 
 }
 

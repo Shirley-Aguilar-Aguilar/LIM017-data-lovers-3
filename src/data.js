@@ -16,13 +16,15 @@ export const sortData = (data, sortBy, sortOrder) => {
     console.log("error de configuración en la función sortData, sortOrder :" + sortOrder );
   }
 };
+
+
 export const ORDER_ASCENDENTE = "asc";
 export const ORDER_DESCENDENTE = "des";
 
 function getSortOrderAsc(prop) {    
   return function(a, b) {    
       if (a[prop] > b[prop]) {    
-          return 1;    
+          return 1; 
       } else if (a[prop] < b[prop]) {    
           return -1;    
       }    
