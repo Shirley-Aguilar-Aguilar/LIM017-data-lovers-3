@@ -65,6 +65,10 @@ buttonFilterByMovieTitleDesc.addEventListener("click",filterDataByMovieTitleDesc
 
 
 //EVENTOS PARA DIRECTORES
+//----------evento ascendente-----------
+let buttonFilterByMovieDirectorAsc = document.getElementById("filterDataByMovieDirectorAsc");
+buttonFilterByMovieDirectorAsc.addEventListener("click",filterDataByMovieDirectorAsc);
+
 function filterDataByMovieDirectorAsc(){
   let orderData = sortData(data.films, "director", ORDER_ASCENDENTE);
   const onlyDirectors = [];
@@ -77,12 +81,31 @@ function filterDataByMovieDirectorAsc(){
   //limpiar
   const filmsDiv = document.getElementById("contentPageTwo");
   filmsDiv.innerHTML = "";
-
-  console.log("viendo tu cosita: " + JSON.stringify(onlyDirectors));
-
   //mostrar directores
   showFilmsDirector(onlyDirectors);
  }
+ 
+ //----------evento descendente-----------
+ let buttonFilterByMovieDirectorDesc = document.getElementById("filterDataByMovieDirectorDesc");
+ buttonFilterByMovieDirectorDesc.addEventListener("click",filterDataByMovieDirectorDesc);
+
+ function filterDataByMovieDirectorDesc(){
+  let orderData = sortData(data.films, "director", ORDER_DESCENDENTE);
+  const onlyDirectors = [];
+  orderData.forEach(p => {
+    if(onlyDirectors.findIndex(pd => pd.director === p.director) === -1) {
+      // No existe; al detectar que no existe el mismo nombre, "la copiamos"
+      onlyDirectors.push(p);
+    }
+  });
+  //limpiar
+  const filmsDiv = document.getElementById("contentPageTwo");
+  filmsDiv.innerHTML = "";
+  //mostrar directores
+  showFilmsDirector(onlyDirectors);
+ }
+
+//MOSTRAR DIRECTORES
 function showFilmsDirector(dataToPrint){
   const filmsDiv = document.getElementById("contentPageTwo");
   let allFilms='';
@@ -99,5 +122,3 @@ function showFilmsDirector(dataToPrint){
   }
   filmsDiv.innerHTML = allFilms;
 }
-let buttonFilterByMovieDirectorAsc = document.getElementById("filterDataByMovieDirectorAsc");
-buttonFilterByMovieDirectorAsc.addEventListener("click",filterDataByMovieDirectorAsc);
