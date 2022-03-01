@@ -16,7 +16,6 @@ export const filterData = (data,condition) => {
 //hacer: debe evaluar al arreglo y traer los elementos que cumplan tal condicion
 //devolver: los elementos que cumplan la condicion 
 
-
 export const sortData = (data, sortBy, sortOrder) => {
   // return '';  data= datos sin orden  sortBy= con respecto a cual de los datos se va a ordenar  sortorder= forma de orden(ascendete, descendente, alfabeticamente)
   let stringdata = JSON.stringify(data);
