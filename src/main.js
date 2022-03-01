@@ -90,9 +90,9 @@ buttonSorByMovieProducerDes.addEventListener("click",sortDataByMovieProducerDes)
 
  
 
-const  botonBuscar = document.getElementById('btnBuscar')
-botonBuscar.addEventListener('click',function (){
-  const textFilter = document.getElementById("seeker").value; 
+const  imgDiv = document.getElementById('searchLogo')
+imgDiv.addEventListener('click',function (){
+  const textFilter = document.getElementById("seekerInput").value; 
   const filmsFiltered = filterData(arrayFilms,textFilter);
   showFilms(filmsFiltered);
 })

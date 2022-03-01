@@ -1,13 +1,7 @@
 
 export const filterData = (data,condition) => {
-  console.log('---------------Inicio------------------')
-  console.log(data)
-  console.log(condition)
-  // console.log(data[condition])
-  console.log('---------------Fin------------------')
-    //return data[condition]
-
-   return data.filter(film => film.title.includes(condition)|| film.director.includes(condition) || film.producer.includes(condition)|| film.release_date.includes(condition))    
+  
+  return data.filter(film => film.title.includes(condition)|| film.director.includes(condition) || film.producer.includes(condition)|| film.release_date.includes(condition))    
 
   // return '';  data= datos sin orden  sortBy= con respecto a cual de los datos se va a ordenar  sortorder= forma de orden(ascendete, descendente, alfabeticamente)
 };
