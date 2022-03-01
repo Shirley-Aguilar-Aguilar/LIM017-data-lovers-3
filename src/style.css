@@ -255,7 +255,7 @@ body {
     width: 35%;
     height: 6%;
     margin: 2%;
-    transform: translateX(80%);
+    transform: translateX(90%);
 }
 #seekerInput{
     width: 80%;
@@ -264,10 +264,9 @@ body {
     left: 3%;
     border: 2px solid burlywood ;
     box-shadow: white 2px 2px 1.5px;
+    padding-left: 3%;
 }
-#seekerInput::placeholder{
-    padding: 1%;
-}
+
 #searchLogo{
     width: 22px;
     height: 25px;
