@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js';
 import { filterData, sortData } from './data.js';
-import { ORDER_ASCENDENTE } from './data.js';
+import { ORDER_ASCENDENTE, ORDER_DESCENDENTE } from './data.js';
 
 const arrayFilms = data.films;
 const buttonAccess = document.getElementById("buttonAccess");
@@ -25,14 +25,14 @@ function showFilms(dataToPrint){
 
   for (let i=0;i< dataToPrint.length ; i++){
     let filmDiv = '<div>'
-    filmDiv = filmDiv + '<img src="'+ filterData(dataToPrint[i], "poster") + '">';
+    filmDiv = filmDiv + '<img src="'+ readPropertyFromFilm(dataToPrint[i], "poster") + '">';
     filmDiv = filmDiv + '<h2>'
-    filmDiv = filmDiv + filterData(dataToPrint[i], "title") +'<br>';  
+    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "title") +'<br>';  
     filmDiv = filmDiv + '</h2>'
     filmDiv = filmDiv + '<h4>'
-    filmDiv = filmDiv + filterData(dataToPrint[i], "director") +'<br>';
-    filmDiv = filmDiv + filterData(dataToPrint[i], "producer")+'<br>'; 
-    filmDiv = filmDiv + filterData(dataToPrint[i], "release_date") +'<br>';
+    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "director") +'<br>';
+    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "producer")+'<br>'; 
+    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "release_date") +'<br>';
     filmDiv = filmDiv + '</h4>'
     filmDiv = filmDiv + '</div>'
     allFilms = filmDiv + allFilms
@@ -51,5 +51,51 @@ function filterDataByMovieTitleAsc(){
   showFilms(orderData);
 }
 
+function sortDataByMovieProducerAsc(){
+  let orderData = sortData(data.films, "producer", ORDER_ASCENDENTE);
+
+  //limpiar el div contentPageTwo
+  const filmsDiv = document.getElementById("contentPageTwo");
+  filmsDiv.innerHTML = "";
+
+  //pintar los objetos ya ordenados
+  showFilms(orderData);
+}
+
+function sortDataByMovieProducerDes(){
+  let orderData = sortData(data.films, "producer", ORDER_DESCENDENTE);
+
+  //limpiar el div contentPageTwo
+  const filmsDiv = document.getElementById("contentPageTwo");
+  filmsDiv.innerHTML = "";
+
+  //pintar los objetos ya ordenados
+  showFilms(orderData);
+}
+
 let buttonFilterByMovieTitleAsc = document.getElementById("filterDataByMovieTitleAsc");
 buttonFilterByMovieTitleAsc.addEventListener("click",filterDataByMovieTitleAsc)
+
+let buttonSorByMovieProducerAsc = document.getElementById("sortDataByMovieProducerAsc");
+buttonSorByMovieProducerAsc.addEventListener("click",sortDataByMovieProducerAsc)
+
+let buttonSorByMovieProducerDes = document.getElementById("sortDataByMovieProducerDes");
+buttonSorByMovieProducerDes.addEventListener("click",sortDataByMovieProducerDes)
+
+
+  function  readPropertyFromFilm(data,property){
+      return  data[property]
+  }
+
+ 
+
+const  botonBuscar = document.getElementById('btnBuscar')
+botonBuscar.addEventListener('click',function (){
+  const textFilter = document.getElementById("seeker").value; 
+  const filmsFiltered = filterData(arrayFilms,textFilter);
+  showFilms(filmsFiltered);
+})
+
+function computeStats (){
+
+}
