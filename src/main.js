@@ -27,11 +27,14 @@ function showFilms(dataToPrint){
     let filmDiv = '<div>'
     filmDiv = filmDiv + '<img src="'+ readPropertyFromFilm(dataToPrint[i], "poster") + '">';
     filmDiv = filmDiv + '<h2>'
-    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "title") +'<br>';  
+    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "title") +'<br>';
     filmDiv = filmDiv + '</h2>'
     filmDiv = filmDiv + '<h4>'
+
+    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "director") +'<br>';
+    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "producer")+'<br>';
     filmDiv = filmDiv + '<p>Director: '+readPropertyFromFilm(dataToPrint[i], "director") +'</p>';
-    filmDiv = filmDiv + '<p>Productor: '+readPropertyFromFilm(dataToPrint[i], "producer")+'</p>'; 
+    filmDiv = filmDiv + '<p>Productor: '+readPropertyFromFilm(dataToPrint[i], "producer")+'</p>';
     filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "release_date") +'<br>';
     filmDiv = filmDiv + '</h4>'
     filmDiv = filmDiv + '</div>'
@@ -88,7 +91,7 @@ function filterDataByMovieDirectorAsc(){
   //mostrar directores
   showFilmsDirector(onlyDirectors);
  }
- 
+
  //----------evento descendente-----------
  let buttonFilterByMovieDirectorDesc = document.getElementById("filterDataByMovieDirectorDesc");
  buttonFilterByMovieDirectorDesc.addEventListener("click",filterDataByMovieDirectorDesc);
@@ -133,7 +136,7 @@ function sortDataByMovieProducerAsc(){
   filmsDiv.innerHTML = "";
 
   //pintar los objetos ya ordenados
-  showFilms(orderData);
+  showFilmsByProducer(orderData);
 }
 
 function sortDataByMovieProducerDes(){
@@ -144,7 +147,7 @@ function sortDataByMovieProducerDes(){
   filmsDiv.innerHTML = "";
 
   //pintar los objetos ya ordenados
-  showFilms(orderData);
+  showFilmsByProducer(orderData);
 }
 
 let buttonSorByMovieProducerAsc = document.getElementById("sortDataByMovieProducerAsc");
@@ -178,6 +181,26 @@ buttonFilterByYearAsc.addEventListener("click",filterDataByYearAsc)
 const buttonFilterByYearDes = document.getElementById("filterDataByYearDes");
 buttonFilterByYearDes.addEventListener("click",filterDataByYearDes)
 
+
+function showFilmsByProducer(dataToPrint) {
+  const filmsDiv = document.getElementById("contentPageTwo");
+  let allFilms = '';
+
+  for (let i = 0; i < dataToPrint.length; i++) {
+    let filmDiv = '<div>'
+    filmDiv = filmDiv + '<img src="' + readPropertyFromFilm(dataToPrint[i], "poster") + '">';
+    filmDiv = filmDiv + '<h3>'
+    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "title") + '<br>';
+    filmDiv = filmDiv + '</h3>'
+    filmDiv = filmDiv + '<h1>'
+    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "producer") + '<br>';
+    filmDiv = filmDiv + '</h1>'
+    filmDiv = filmDiv + '</div>'
+    allFilms = filmDiv + allFilms
+  }
+  filmsDiv.innerHTML = allFilms;
+
+}
 function showFilmsByYear(dataToPrint){
   const filmsDiv = document.getElementById("contentPageTwo");
   let allFilms='';
@@ -186,7 +209,7 @@ function showFilmsByYear(dataToPrint){
     let filmDiv = '<div>'
     filmDiv = filmDiv + '<img src="'+ readPropertyFromFilm(dataToPrint[i], "poster") + '">';
     filmDiv = filmDiv + '<h3>'
-    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "title") +'<br>'; 
+    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "title") +'<br>';
     filmDiv = filmDiv + '</h3>'
     filmDiv = filmDiv + '<h1>'
     filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "release_date") +'<br>';
@@ -198,9 +221,10 @@ function showFilmsByYear(dataToPrint){
 }
 
 
+
 const  imgDiv = document.getElementById('buttonSearch')
 imgDiv.addEventListener('click',function (){
-  const textFilter = document.getElementById("seekerInput").value; 
+  const textFilter = document.getElementById("seekerInput").value;
   const filmsFiltered = filterData(arrayFilms,textFilter);
   showFilms(filmsFiltered);
 })
@@ -208,12 +232,15 @@ imgDiv.addEventListener('click',function (){
 const elem = document.getElementById('seekerInput');
 elem.addEventListener("keyup", function(e) {
   if (e.key === "Enter") {
-    const textFilter = document.getElementById("seekerInput").value; 
+    const textFilter = document.getElementById("seekerInput").value;
     const filmsFiltered = filterData(arrayFilms,textFilter);
     showFilms(filmsFiltered);
   }
 });
 
 /*function computeStats (){
+<<<<<<< HEAD
+=======
 
+>>>>>>> c5c4c631a0f6e936b6fb1c8c41097f7bda36f96a
 }*/
