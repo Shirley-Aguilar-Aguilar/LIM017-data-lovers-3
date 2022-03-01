@@ -1,16 +1,95 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers2</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
 
-    HOLAAAAAAAAAA
-    <div id="root"></div>
-    <p>hola chicassdfghjklñ</p>
+<head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--hace que la pag sea responsive-->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section id="pageOne">
+        <header id="titlePageOne">
+            <h1> <strong> Studio Ghibli</strong> </h1>
+        </header>
+        <main id="contentPageOne">
+            <div class="descriptionPageOne">
+                <p>Esta página web brinda información sobre los largometrajes animados, creados y producidos en
+                    el Studio Ghibli.</p>
+            </div>
+            <div id="contentInput">
+                <input id="userInput" type="text" placeholder=" Ingrese su nombre">
+                <button id="buttonAccess">ACCEDER</button>
+            </div>
+        </main>
+        <div id="greetingPageOne" style="display:none;">
+            <p>Hola <strong id="userName"></strong>! Ya puedes navegar en esta pagina web</p>
+        </div>
+    </section>
+
+    <section id="pageTwo" style="display:none;">
+        <header id="headerPageTwo">
+            <img id="logo" src="logo-studio-ghibli.png" alt="">
+            <input type="checkbox" id="check">
+            <label for="check" class="show-menu">
+                &#8801
+            </label>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Películas</a>
+                        <ul>
+                            <li><a href="#" id="filterDataByMovieTitleAsc">A-Z </a></li>
+                            <li><a href="#"id="filterDataByMovieTitleDesc">Z-A</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Directores</a>
+                        <ul>
+                            <li><a href="#" id="filterDataByMovieDirectorAsc">A-Z </a></li>
+                            <li><a href="#" id="filterDataByMovieDirectorDesc">Z-A</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Productores</a>
+                        <ul>
+                            <li><a href="#" id="sortDataByMovieProducerAsc">A-Z </a></li>
+                            <li><a href="#" id="sortDataByMovieProducerDes"> Z-A</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Año de lanzamiento</a>
+                        <ul>
+                            <li><a href="#" id="filterDataByYearDes">Mas reciente</a></li>
+                            <li><a href="#" id="filterDataByYearAsc">Mas antiguo</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Personajes</a>
+                        <ul>
+                            <li><a href="#" id="filterDataByHuman">Humanos</a></li>
+                            <li><a href="#" id="filterDataByCats">Felinos</a> </li>
+                            <li><a href="#" id="filterDataByTotoros">Totoros</a> </li>
+                            <li><a href="#" id="filterDataByOthers">Otros</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+                <label for="check" class="hide-menu">
+                    &#215
+                </label>
+
+            </nav>
+        </header>
+
+        <div id="seeker">
+            <input id="seekerInput" placeholder="Buscar por palabras claves">
+            <img id="searchLogo" src="search-logo.png" >
+            <button id="buttonSearch">Buscar</button>
+        </div>
+
+        <main id="contentPageTwo">
+        </main>
+    </section>
 
     <script src="main.js" type="module"></script>
-  </body>
+</body>
+
 </html>

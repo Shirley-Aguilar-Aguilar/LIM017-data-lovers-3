@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* how padding and border are added to the element,
+  content box adds to the orginal size
+  border box mantains the original size*/
+}
+body {
+    height: 100vh; 
+    width: 100vw;/* 100% visible part of the page
+    vh = 1% viewpoint height or avaliable height space,
+    vw = 1% viewpoint width*/
+}
+#pageOne{
+    background: url(fondo1.jpg) no-repeat center center; /* la imagen a ser mostrada a pantalla completa */
+    height: 100%;
+    width: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
+    background-size: cover; /* Propiedad a utilizar para la imagen */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#titlePageOne{
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+    margin-bottom: 12%;
+    -webkit-text-stroke: 2px rgb(26, 83, 26) ;
+    font: bolder 8.2vh Helvetica;
+    text-shadow: rgb(25, 104, 25) 5px 4px 3px;  
+}
+
+#contentPageOne{
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    align-items:center ;
+}
+.descriptionPageOne{
+  border-color: green ;
+    background-color: white;
+    font-size: 200% ;
+    text-align: center;
+    color: black;
+    width:16em;
+    border-radius: 30px;
+    border: 3px solid green;
+    box-shadow: rgb(25, 104, 25) 3px 3px 3px;;
+    margin-left: 14%;
+    padding: 1% 1% 1% 1%;
+    line-height: 1.7em;   
+}
+
+#contentInput{
+    display: flex;
+    flex-wrap:wrap-reverse;
+    flex-direction:column ;
+    justify-content: space-between;
+    align-items:center ;
+    margin-right: 20%;
+}
+#userInput{
+    height: 3.5em;
+    width:23em;
+    margin-bottom: 10%;
+    border-radius: 40px;
+    text-align: center;
+    border: 2px solid green;
+    box-shadow: rgb(25, 104, 25) 3px 3px 3px;
+    font-size: larger;
+}
+#buttonAccess{
+    height: 3em;
+    width:12em;
+    color :white;
+    margin-bottom: 10%;
+    border-radius: 40px;
+    background-color: rgb(101, 66, 182);
+    border: 4px solid white ;
+    font-size: large;
+}
+#greetingPageOne{
+    display: flex;
+    flex-direction:column ;
+    align-items:center ;
+    border-color: green ;
+    border-radius: 40px;
+    color: rgb(13, 70, 13);
+    width:14em;
+    padding: 2% 2% 2% 2%;
+    margin-left: 35%;
+    line-height: 1.7em;
+    background-color: white;
+    font-size: 250% ;
+    color: black;
+}
+
+/*usando media queries para característica responsiva Historia 1*/
+
+@media screen and (max-width: 1400px){ 
+  #titlePageOne{
+    margin-bottom: 4%;
+  }
+  .descriptionPageOne{
+      font-size: 170% ;
+      width:15em; 
+      margin-right: 18%;
+      margin-bottom: 10%;
+      margin-top: 6%;
+  } 
+  #contentInput{
+      margin-right: 9%;
+      margin-bottom: 6%;
+  }
+   #userInput{
+      height: 2.9em;
+      width:16em;
+      margin-bottom: 10%;
+  }
+  #greetingPageOne{
+    border-radius: 30px;
+    width:10em;
+    line-height: 1.3em;
+    font-size: 220% ;
+    justify-content: center;
+    }
+    #buttonAccess{
+        height: 2.5em;
+        width:11em;
+        border-radius: 30px;
+        border: 3px solid white ;
+        font-size: medium;
+    }
+  
+}
+@media screen and (max-width: 650px){ 
+  #greetingPageOne{
+    border-radius: 25px;
+    width:8em;
+    margin-left: 20%;
+    line-height: 1.1em;
+    font-size: 170% ;
+    justify-content: center;
+    margin-bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 450px){ 
+  #titlePageOne{
+    font: bolder 7vh Helvetica;
+    text-align: center;
+    margin-bottom: 15%;
+  }
+  .descriptionPageOne{
+      font-size: 120% ;
+      width:15em;
+      line-height: 1.5em;   
+      margin-right: 12%;
+  }
+  #contentInput{
+      margin-right: 1%;
+  }
+  #userInput{
+      height: 2.7em;
+      width:13.5em;
+      margin-bottom: 10%;
+  }
+  #buttonAccess{
+      height: 2.5em;
+      width:8.5em;
+      margin-bottom: 23%;
+      border-radius: 30px;
+      font-size: medium; 
+  }
+}
+
+
+#pageTwo{
+    height: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
+    width: 100%;
+    background: url(fondo2.jpg) no-repeat center center;
+    background-size: cover;
+    overflow: scroll;
+}
+
+#pageTwo::-webkit-scrollbar{
+    display: none;
+}
+/* creando diseño para historia 3 */
+#headerPageTwo{
+    background-color:blanchedalmond;
+    height: 16%;
+    padding: 0 50px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+#logo{
+    height: 80px;
+    width: 160px;
+}
+
+.show-menu,
+.hide-menu{
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.show-menu{
+    order:1;
+
+}
+
+.menu a:hover,
+.show-menu:hover,
+.hide-menu:hover{
+    color:#CC673B;
+}
+
+#check{
+    display: none;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: #191C26;
+    padding: 5px 10px;
+    /* background-color:blanchedalmond; */
+}
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    min-width: 120px;
+    max-width: 160px;
+    background-color: sandybrown;
+    float: none;
+    z-index: 1000;
+}
+.menu ul li a:hover + ul, .menu ul li ul:hover {
+    display: block;
+}
+
+#seeker{
+    width: 35%;
+    height: 6%;
+    margin: 2%;
+    transform: translateX(90%);
+}
+#seekerInput{
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    left: 3%;
+    border: 2px solid burlywood ;
+    box-shadow: white 2px 2px 1.5px;
+    padding-left: 3%;
+}
+
+#searchLogo{
+    width: 22px;
+    height: 25px;
+    position: absolute;
+    right: 22% ;
+    top: 15%;
+    border: 0;
+}
+#buttonSearch{
+    width: 15%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    right: 3%;
+    background-color:blanchedalmond;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 2px solid burlywood ;
+    box-shadow: white 2px 2px 1.5px;
+}
+
+#contentPageTwo{
+    display: flex;
+    flex-direction:row-reverse ;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    align-items:center;
+}
+
+#contentPageTwo > div{
+    width: 20%;
+    text-align: center;
+    margin-bottom: 6%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1%;
+ }
+
+ img{
+    height: 180px;
+    width: 130px;
+     border-radius: 25px;
+     border: 4px solid burlywood ;
+     box-shadow: white 4px 4px 3px;
+ }
+
+ #contentPageTwo > article{
+    width: 33.3%;
+    text-align: center;
+    margin-bottom: 4%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1%;
+ }
+
+ #contentPageTwo > article img{
+    height: 200px;
+    width: 160px;
+    border-radius: 25px;
+    border: 4px solid burlywood ;
+    box-shadow: white 4px 4px 3px;
+ }
+ 
+/*RESPONSIVE*/
+@media(max-width: 768px){
+    /*HEADER*/
+    .show-menu,
+    .hide-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width:100%;
+        height: 100vh;
+        background-color: blanchedalmond;
+        left: 0 ;
+        /* right:-100%;*/
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index:100;
+        transition:0.8s;
+    }
+    .menu ul{
+        display: inline-block;
+    }
+    .menu ul li ul {
+        display: none;
+        position: relative;
+        width: 110px; /*cambia*/
+        background-color: sandybrown;
+    }
+    .menu ul li a:hover + ul, .menu ul li ul:hover {
+    display: block;
+    transform: translateX(40%);/*cambia*/
+}
+    
+    .hide-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    /* #check:checked ~ .menu{
+        right: 0 ;
+    } */
+
+    #contentPageTwo > div{
+        width: 50%;
+        text-align: center;
+        padding: 1%;
+     }
+    
+}
+
+
+/*especificidad
+++++ style in line
++++id selector(#id)
+++class selector, atribute selector y pseudo-class
++element selector or pseudo-element*/

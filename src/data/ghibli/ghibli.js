@@ -8,6 +8,7 @@ export default {
       "director": "Hayao Miyazaki",
       "producer": "Isao Takahata",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg",
+      "posterDirector":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
       "release_date": "1986",
       "rt_score": "95",
       "people": [
@@ -210,6 +211,7 @@ export default {
       "director": "Hayao Miyazaki",
       "producer": "Hayao Miyazaki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/d/db/My_Neighbor_Totoro.jpg",
+      "posterDirector":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
       "release_date": "1988",
       "rt_score": "93",
       "people": [
@@ -358,6 +360,7 @@ export default {
       "director": "Hayao Miyazaki",
       "producer": "Hayao Miyazaki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/4/48/Kiki%27s_Delivery_Service_%282%29.jpg",
+      "posterDirector":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
       "release_date": "1989",
       "rt_score": "96",
       "people": [
@@ -484,6 +487,7 @@ export default {
       "director": "Isao Takahata",
       "producer": "Toru Hara",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a5/Grave_of_the_Fireflies_Japanese_poster.jpg",
+      "posterDirector":"https://ramenparados.com/wp-content/uploads/2019/06/takahata-300x450.jpg",
       "release_date": "1988",
       "rt_score": "97",
       "people": [
@@ -548,6 +552,7 @@ export default {
       "director": "Isao Takahata",
       "producer": "Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a9/Only_Yesterday.jpg",
+      "posterDirector":"https://ramenparados.com/wp-content/uploads/2019/06/takahata-300x450.jpg",
       "release_date": "1991",
       "rt_score": "100",
       "people": [
@@ -684,6 +689,7 @@ export default {
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
       "poster" : "https://static.wikia.nocookie.net/studio-ghibli/images/4/41/Porco_Rosso.jpg",
+      "posterDirector":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
       "release_date": "1992",
       "rt_score": "94",
       "people": [
@@ -805,6 +811,7 @@ export default {
       "director": "Isao Takahata",
       "producer": "Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/9/9e/Pom_Poko.jpg",
+      "posterDirector":"https://ramenparados.com/wp-content/uploads/2019/06/takahata-300x450.jpg",
       "release_date": "1994",
       "rt_score": "78",
       "people": [
@@ -879,6 +886,7 @@ export default {
       "director": "Yoshifumi Kondō",
       "producer": "Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/7/7b/Whisper_of_the_Heart.jpg",
+      "posterDirector":"https://images.moviefit.me/p/o/33089-yoshifumi-kondou.jpg",
       "release_date": "1995",
       "rt_score": "91",
       "people": [
@@ -995,6 +1003,7 @@ export default {
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c6/Princess_Mononoke.jpg",
+      "posterDirector":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
       "release_date": "1997",
       "rt_score": "92",
       "people": [
@@ -1139,6 +1148,7 @@ export default {
       "director": "Isao Takahata",
       "producer": "Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/d/db/My_Neighbors_the_Yamadas.jpg",
+      "posterDirector":"https://ramenparados.com/wp-content/uploads/2019/06/takahata-300x450.jpg",
       "release_date": "1999",
       "rt_score": "75",
       "people": [
@@ -1203,6 +1213,7 @@ export default {
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/9/9e/Spirited_Away.png",
+       "posterDirector":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
       "release_date": "2001",
       "rt_score": "97",
       "people": [
@@ -1340,6 +1351,7 @@ export default {
       "director": "Hiroyuki Morita",
       "producer": "Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/8/87/The_Cat_Returns.jpg",
+      "posterDirector":"https://www.cinetrafic.fr/images/affiches/medium/aff_148153131044.jpg",
       "release_date": "2002",
       "rt_score": "89",
       "people": [
@@ -1471,6 +1483,7 @@ export default {
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/0/08/Howl%27s_Moving_Castle.jpg",
+      "posterDirector":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
       "release_date": "2004",
       "rt_score": "87",
       "people": [
@@ -1610,6 +1623,7 @@ export default {
       "director": "Gorō Miyazaki",
       "producer": "Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/0/09/%C3%96v%C3%A4rlden.jpg",
+      "posterDirector":"https://es.web.img3.acsta.net/medias/nmedia/18/64/05/43/20000044.jpg",
       "release_date": "2006",
       "rt_score": "41",
       "people": [
@@ -1716,6 +1730,7 @@ export default {
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/5/50/Ponyo_on_the_Cliff_by_the_Sea.jpg",
+      "posterDirector":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
       "release_date": "2008",
       "rt_score": "92",
       "people": [
@@ -1865,7 +1880,8 @@ export default {
       "description": "14-year-old Arrietty and the rest of the Clock family live in peaceful anonymity as they make their own home from items 'borrowed' from the house's human inhabitants. However, life changes for the Clocks when a human boy discovers Arrietty.",
       "director": "Hiromasa Yonebayashi",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/4/46/The_Borrower_Arrietty.jpg",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/e/e7/Karigurashi_no_Arrietty_poster.png",
+      "posterDirector":"https://www.cartoonbrew.com/wp-content/uploads/2015/10/hiromasayonebayashi.jpg",
       "release_date": "2010",
       "rt_score": "95",
       "people": [
@@ -1983,6 +1999,7 @@ export default {
       "director": "Gorō Miyazaki",
       "producer": "Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/b/bb/From_Up_on_Poppy_Hill.jpg",
+      "posterDirector":"https://es.web.img3.acsta.net/medias/nmedia/18/64/05/43/20000044.jpg",
       "release_date": "2011",
       "rt_score": "83",
       "people": [
@@ -2089,6 +2106,7 @@ export default {
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/2/2d/The_Wind_Rises.jpg",
+      "posterDirector":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
       "release_date": "2013",
       "rt_score": "89",
       "people": [
@@ -2208,6 +2226,7 @@ export default {
       "director": "Isao Takahata",
       "producer": "Yoshiaki Nishimura",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/8/87/The_Tale_of_the_Princess_Kaguya.jpg",
+      "posterDirector":"https://ramenparados.com/wp-content/uploads/2019/06/takahata-300x450.jpg",
       "release_date": "2013",
       "rt_score": "100",
       "people": [
@@ -2314,6 +2333,7 @@ export default {
       "director": "Hiromasa Yonebayashi",
       "producer": "Yoshiaki Nishimura",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/7/7a/When_Marnie_Was_There.jpg",
+      "posterDirector":"https://www.cartoonbrew.com/wp-content/uploads/2015/10/hiromasayonebayashi.jpg",
       "release_date": "2014",
       "rt_score": "92",
       "people": [
