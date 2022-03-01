@@ -147,29 +147,6 @@ function sortDataByMovieProducerDes(){
   showFilms(orderData);
 }
 
-
-function sortDataByMovieProducerAsc(){
-  let orderData = sortData(data.films, "producer", ORDER_ASCENDENTE);
-
-  //limpiar el div contentPageTwo
-  const filmsDiv = document.getElementById("contentPageTwo");
-  filmsDiv.innerHTML = "";
-
-  //pintar los objetos ya ordenados
-  showFilms(orderData);
-}
-
-function sortDataByMovieProducerDes(){
-  let orderData = sortData(data.films, "producer", ORDER_DESCENDENTE);
-
-  //limpiar el div contentPageTwo
-  const filmsDiv = document.getElementById("contentPageTwo");
-  filmsDiv.innerHTML = "";
-
-  //pintar los objetos ya ordenados
-  showFilms(orderData);
-}
-
 let buttonSorByMovieProducerAsc = document.getElementById("sortDataByMovieProducerAsc");
 buttonSorByMovieProducerAsc.addEventListener("click",sortDataByMovieProducerAsc)
 
@@ -208,6 +185,6 @@ imgDiv.addEventListener('click',function (){
 })
 
 
-function computeStats (){
+/*function computeStats (){
 
-}
+}*/
