@@ -198,7 +198,7 @@ function showFilmsByYear(dataToPrint){
 }
 
 
-const  imgDiv = document.getElementById('searchLogo')
+const  imgDiv = document.getElementById('buttonSearch')
 imgDiv.addEventListener('click',function (){
   const textFilter = document.getElementById("seekerInput").value; 
   const filmsFiltered = filterData(arrayFilms,textFilter);
