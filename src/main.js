@@ -204,7 +204,15 @@ imgDiv.addEventListener('click',function (){
   const filmsFiltered = filterData(arrayFilms,textFilter);
   showFilms(filmsFiltered);
 })
-
+/*que busque al dar enter*/
+const elem = document.getElementById('seekerInput');
+elem.addEventListener("keyup", function(e) {
+  if (e.key === "Enter") {
+    const textFilter = document.getElementById("seekerInput").value; 
+    const filmsFiltered = filterData(arrayFilms,textFilter);
+    showFilms(filmsFiltered);
+  }
+});
 
 /*function computeStats (){
 
