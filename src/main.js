@@ -30,8 +30,8 @@ function showFilms(dataToPrint){
     filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "title") +'<br>';  
     filmDiv = filmDiv + '</h2>'
     filmDiv = filmDiv + '<h4>'
-    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "director") +'<br>';
-    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "producer")+'<br>'; 
+    filmDiv = filmDiv + '<p>Director: '+readPropertyFromFilm(dataToPrint[i], "director") +'</p>';
+    filmDiv = filmDiv + '<p>Productor: '+readPropertyFromFilm(dataToPrint[i], "producer")+'</p>'; 
     filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "release_date") +'<br>';
     filmDiv = filmDiv + '</h4>'
     filmDiv = filmDiv + '</div>'
