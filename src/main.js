@@ -161,14 +161,7 @@ imgDiv.addEventListener('click',function (){
   showFilms(filmsFiltered);
 })
 
-function filterDataByYearAsc(){
-  const orderData = sortData(data.films, "release_date", ORDER_ASCENDENTE);
-  //limpiar el div contentPageTwo
-  const filmsDiv = document.getElementById("contentPageTwo");
-  filmsDiv.innerHTML = "";
-  //pintar los objetos ya ordenados
-  showFilms(orderData);
-}
+
 let buttonFilterByYearAsc = document.getElementById("filterDataByYearAsc");
 buttonFilterByYearAsc.addEventListener("click",filterDataByYearAsc)
 
@@ -182,6 +175,15 @@ function filterDataByYearDes(){
 }
 const buttonFilterByYearDes = document.getElementById("filterDataByYearDes");
 buttonFilterByYearDes.addEventListener("click",filterDataByYearDes)
+
+function filterDataByYearAsc(){
+  const orderData = sortData(data.films, "release_date", ORDER_ASCENDENTE);
+  //limpiar el div contentPageTwo
+  const filmsDiv = document.getElementById("contentPageTwo");
+  filmsDiv.innerHTML = "";
+  //pintar los objetos ya ordenados
+  showFilms(orderData);
+}
 
 function computeStats (){
 
