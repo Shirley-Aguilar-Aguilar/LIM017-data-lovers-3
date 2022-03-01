@@ -178,25 +178,30 @@ body {
 
 
 #pageTwo{
-    background: url(fondo2.jpg) no-repeat center center;
     height: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
     width: 100%;
-    background-size: cover; 
+    background: url(fondo2.jpg) no-repeat center center;
+    background-size: cover;
+    overflow: scroll;
 }
 
+#pageTwo::-webkit-scrollbar{
+    display: none;
+}
 /* creando diseño para historia 3 */
 #headerPageTwo{
     background-color:blanchedalmond;
-    height: 100px;
+    height: 16%;
     padding: 0 50px;
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 #logo{
-    height: 70px;
-    width: 140px;
+    height: 80px;
+    width: 160px;
 }
 
 .show-menu,
@@ -205,7 +210,6 @@ body {
     cursor: pointer;
     display: none;
     transition: 0.4s;
-
 }
 
 .show-menu{
@@ -232,15 +236,38 @@ body {
     text-decoration: none;
     color: #191C26;
     padding: 5px 10px;
-    background-color:blanchedalmond;
 }
 .menu ul li ul {
     display: none;
     position: absolute;
-    width: 120px;
+    width: 110px;
+    background-color: sandybrown;
+    float: none;
 }
 .menu ul li a:hover + ul, .menu ul li ul:hover {
     display: block;
+}
+
+#seeker{
+    width: 35%;
+    height: 5%;
+    margin: 2%;
+    transform: translateX(80%);
+}
+#seekerInput{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+#seekerInput::placeholder{
+    padding: 1%;
+}
+#searchLogo{
+    width: 22px;
+    height: 25px;
+    position: absolute;
+    right: 1% ;
+    top: 10%;
 }
 
 #contentPageTwo{
@@ -254,10 +281,11 @@ body {
 #contentPageTwo > div{
     width: 20%;
     text-align: center;
+    padding: 1%;
  }
 
  img{
-     height: 200px;
+     height: 180px;
      width: 130px;
  }
  
@@ -280,20 +308,20 @@ body {
         padding: 100px 0px;
         z-index:100;
         transition:0.8s;
-
     }
-    .menu ul {
-        display: list-item;
-        list-style-type: none;
-        text-align: center;
-        display: block;
-
+    .menu ul{
+        display: inline-block;
     }
-    .menu li a{
-        display:block;
-        padding: 20px;
-        text-decoration: none;
+    .menu ul li ul {
+        display: none;
+        position: relative;
+        width: 110px;
+        background-color: sandybrown;
     }
+    .menu ul li a:hover + ul, .menu ul li ul:hover {
+    display: block;
+    transform: translateX(15%);
+}
     
     .hide-menu{
         position: absolute;
@@ -304,6 +332,12 @@ body {
         right: 0 ;
     }
 
+    #contentPageTwo > div{
+        width: 50%;
+        text-align: center;
+        padding: 1%;
+     }
+    
 }
 
 
