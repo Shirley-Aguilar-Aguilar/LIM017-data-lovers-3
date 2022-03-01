@@ -14,13 +14,7 @@ export const filterData = (data,condition) => {
 // Defines lo que debe recibir, lo que debe hacer, y lo que debe devolver
 //recibir : debe recibir un arreglo con una condicion
 //hacer: debe evaluar al arreglo y traer los elementos que cumplan tal condicion
-<<<<<<< HEAD
-//devolver: los elementos que cumplan la condicion
- 
-=======
 //devolver: los elementos que cumplan la condicion 
->>>>>>> 2500c8760b7c77ef8512ffc35521ecb11c0eb3e6
-
 
 export const sortData = (data, sortBy, sortOrder) => {
   // return '';  data= datos sin orden  sortBy= con respecto a cual de los datos se va a ordenar  sortorder= forma de orden(ascendete, descendente, alfabeticamente)
