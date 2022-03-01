@@ -112,11 +112,10 @@ function showFilmsDirector(dataToPrint){
 
   for (let i=0;i< dataToPrint.length ; i++){
     let filmDiv = '<div>'
-    // filmDiv = filmDiv + '<img src="'+ filterData(dataToPrint[i], "poster") + '">';
     filmDiv = filmDiv + '<img src="'+ filterData(dataToPrint[i], "posterDirector") + '">';
-    filmDiv = filmDiv + '<h4>'
+    filmDiv = filmDiv + '<h2>'
     filmDiv = filmDiv + filterData(dataToPrint[i], "director") +'<br>';
-    filmDiv = filmDiv + '</h4>'
+    filmDiv = filmDiv + '</h2>'
     filmDiv = filmDiv + '</div>'
     allFilms = filmDiv + allFilms
   }
