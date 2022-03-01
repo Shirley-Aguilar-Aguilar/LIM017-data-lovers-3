@@ -54,6 +54,7 @@ function filterDataByMovieTitleAsc(){
   //pintar los objetos ya ordenados
   showFilms(orderData);
 }
+
 let buttonFilterByMovieTitleAsc = document.getElementById("filterDataByMovieTitleAsc");
 buttonFilterByMovieTitleAsc.addEventListener("click",filterDataByMovieTitleAsc);
 
@@ -146,21 +147,20 @@ function sortDataByMovieProducerDes(){
   showFilms(orderData);
 }
 
-
 let buttonSorByMovieProducerAsc = document.getElementById("sortDataByMovieProducerAsc");
 buttonSorByMovieProducerAsc.addEventListener("click",sortDataByMovieProducerAsc)
 
 let buttonSorByMovieProducerDes = document.getElementById("sortDataByMovieProducerDes");
 buttonSorByMovieProducerDes.addEventListener("click",sortDataByMovieProducerDes)
 
-
-const  imgDiv = document.getElementById('searchLogo')
-imgDiv.addEventListener('click',function (){
-  const textFilter = document.getElementById("seekerInput").value; 
-  const filmsFiltered = filterData(arrayFilms,textFilter);
-  showFilms(filmsFiltered);
-})
-
+function filterDataByYearAsc(){
+  const orderData = sortData(data.films, "release_date", ORDER_ASCENDENTE);
+  //limpiar el div contentPageTwo
+  const filmsDiv = document.getElementById("contentPageTwo");
+  filmsDiv.innerHTML = "";
+  //pintar los objetos ya ordenados
+  showFilms(orderData);
+}
 
 let buttonFilterByYearAsc = document.getElementById("filterDataByYearAsc");
 buttonFilterByYearAsc.addEventListener("click",filterDataByYearAsc)
@@ -173,18 +173,17 @@ function filterDataByYearDes(){
   //pintar los objetos ya ordenados
   showFilms(orderData);
 }
+
 const buttonFilterByYearDes = document.getElementById("filterDataByYearDes");
 buttonFilterByYearDes.addEventListener("click",filterDataByYearDes)
 
-function filterDataByYearAsc(){
-  const orderData = sortData(data.films, "release_date", ORDER_ASCENDENTE);
-  //limpiar el div contentPageTwo
-  const filmsDiv = document.getElementById("contentPageTwo");
-  filmsDiv.innerHTML = "";
-  //pintar los objetos ya ordenados
-  showFilms(orderData);
-}
+const  imgDiv = document.getElementById('searchLogo')
+imgDiv.addEventListener('click',function (){
+  const textFilter = document.getElementById("seekerInput").value; 
+  const filmsFiltered = filterData(arrayFilms,textFilter);
+  showFilms(filmsFiltered);
+})
 
-function computeStats (){
+/*function computeStats (){
 
-}
+}*/

@@ -241,8 +241,11 @@ body {
 .menu ul li ul {
     display: none;
     position: absolute;
-    width: 120px;
-    background-color:sandybrown
+    min-width: 120px;
+    max-width: 160px;
+    background-color: sandybrown;
+    float: none;
+    z-index: 1000;
 }
 .menu ul li a:hover + ul, .menu ul li ul:hover {
     display: block;
@@ -292,7 +295,6 @@ body {
      border-radius: 25px;
      border: 4px solid burlywood ;
      box-shadow: white 4px 4px 3px;
-     
  }
  
 /*RESPONSIVE*/
