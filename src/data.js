@@ -1,6 +1,3 @@
- /* return data[condition]
-  // return '';  data= datos sin orden  sortBy= con respecto a cual de los datos se va a ordenar  sortorder= forma de orden(ascendete, descendente, alfabeticamente)
-}; */
 export const filterData = (data,condition) => {
   return data.filter(film => film.title.includes(condition)|| film.director.includes(condition) || film.producer.includes(condition)|| film.release_date.includes(condition))    
 
@@ -17,10 +14,7 @@ export const filterData = (data,condition) => {
 // Defines lo que debe recibir, lo que debe hacer, y lo que debe devolver
 //recibir : debe recibir un arreglo con una condicion
 //hacer: debe evaluar al arreglo y traer los elementos que cumplan tal condicion
-//devolver: los elementos que cumplan la condicion
- 
-
-
+//devolver: los elementos que cumplan la condicion 
 
 
 export const sortData = (data, sortBy, sortOrder) => {
