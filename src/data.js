@@ -1,6 +1,4 @@
-
 export const filterData = (data,condition) => {
-  
   return data.filter(film => film.title.includes(condition)|| film.director.includes(condition) || film.producer.includes(condition)|| film.release_date.includes(condition))    
 
   // return '';  data= datos sin orden  sortBy= con respecto a cual de los datos se va a ordenar  sortorder= forma de orden(ascendete, descendente, alfabeticamente)
@@ -32,13 +30,15 @@ export const sortData = (data, sortBy, sortOrder) => {
     console.log("error de configuración en la función sortData, sortOrder :" + sortOrder );
   }
 };
+
+
 export const ORDER_ASCENDENTE = "asc";
 export const ORDER_DESCENDENTE = "des";
 
 function getSortOrderAsc(prop) {    
   return function(a, b) {    
       if (a[prop] > b[prop]) {    
-          return 1;    
+          return 1; 
       } else if (a[prop] < b[prop]) {    
           return -1;    
       }    
