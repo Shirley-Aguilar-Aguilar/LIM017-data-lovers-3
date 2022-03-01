@@ -1,6 +1,7 @@
 import data from './data/ghibli/ghibli.js';
 import { filterData, sortData } from './data.js';
-import { ORDER_ASCENDENTE, ORDER_DESCENDENTE } from './data.js';
+import { ORDER_ASCENDENTE } from './data.js';
+import { ORDER_DESCENDENTE } from './data.js';
 
 const arrayFilms = data.films;
 const buttonAccess = document.getElementById("buttonAccess");
@@ -99,3 +100,25 @@ botonBuscar.addEventListener('click',function (){
 function computeStats (){
 
 }
+
+function filterDataByYearAsc(){
+  const orderData = sortData(data.films, "release_date", ORDER_ASCENDENTE);
+  //limpiar el div contentPageTwo
+  const filmsDiv = document.getElementById("contentPageTwo");
+  filmsDiv.innerHTML = "";
+  //pintar los objetos ya ordenados
+  showFilms(orderData);
+}
+let buttonFilterByYearAsc = document.getElementById("filterDataByYearAsc");
+buttonFilterByYearAsc.addEventListener("click",filterDataByYearAsc)
+
+function filterDataByYearDes(){
+  const orderData = sortData(data.films, "release_date", ORDER_DESCENDENTE);
+  //limpiar el div contentPageTwo
+  const filmsDiv = document.getElementById("contentPageTwo");
+  filmsDiv.innerHTML = "";
+  //pintar los objetos ya ordenados
+  showFilms(orderData);
+}
+const buttonFilterByYearDes = document.getElementById("filterDataByYearDes");
+buttonFilterByYearDes.addEventListener("click",filterDataByYearDes)

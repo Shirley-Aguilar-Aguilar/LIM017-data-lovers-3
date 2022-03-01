@@ -42,7 +42,7 @@
                     <li><a href="#">Películas</a>
                         <ul>
                             <li><a href="#" id="filterDataByMovieTitleAsc">A-Z </a></li>
-                            <li><a href="#">Z-A</a> </li>
+                            <li><a href="#" >Z-A</a> </li>
                         </ul>
                     </li>
                     <li><a href="#">Directores</a>
@@ -59,23 +59,24 @@
                     </li>
                     <li><a href="#">Año de lanzamiento</a>
                         <ul>
-                            <li><a href="#">Mas reciente</a></li>
-                            <li><a href="#">Mas antiguo</a> </li>
-                        </ul></li>
+                            <li><a href="#" id="filterDataByYearDes">Mas reciente</a></li>
+                            <li><a href="#" id="filterDataByYearAsc">Mas antiguo</a> </li>
+                        </ul>
+                    </li>
                 </ul>
                 <label for="check" class="hide-menu">
                     &#215
                 </label>
 
             </nav>
-
         </header>
-        <div >
-            <input placeholder="Buscar por palabras claves" id="seeker">
-            <button id="btnBuscar">Buscar</button>
-        </div>
-        <main id="contentPageTwo">
 
+        <div id="seeker">
+            <input id="seekerInput" placeholder="Buscar por palabras claves">
+            <img id="searchLogo" src="search-logo.png" > 
+        </div>
+
+        <main id="contentPageTwo">
         </main>
     </section>
 
