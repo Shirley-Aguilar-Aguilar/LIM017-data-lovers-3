@@ -7,7 +7,7 @@
   border box mantains the original size*/
 }
 body {
-    height: 100vh; 
+    height: 100vh;
     width: 100vw;/* 100% visible part of the page
     vh = 1% viewpoint height or avaliable height space,
     vw = 1% viewpoint width*/
@@ -26,7 +26,7 @@ body {
     margin-bottom: 12%;
     -webkit-text-stroke: 2px rgb(26, 83, 26) ;
     font: bolder 8.2vh Helvetica;
-    text-shadow: rgb(25, 104, 25) 5px 4px 3px;  
+    text-shadow: rgb(25, 104, 25) 5px 4px 3px;
 }
 
 #contentPageOne{
@@ -48,7 +48,7 @@ body {
     box-shadow: rgb(25, 104, 25) 3px 3px 3px;;
     margin-left: 14%;
     padding: 1% 1% 1% 1%;
-    line-height: 1.7em;   
+    line-height: 1.7em;
 }
 
 #contentInput{
@@ -97,17 +97,17 @@ body {
 
 /*usando media queries para característica responsiva Historia 1*/
 
-@media screen and (max-width: 1400px){ 
+@media screen and (max-width: 1400px){
   #titlePageOne{
     margin-bottom: 4%;
   }
   .descriptionPageOne{
       font-size: 170% ;
-      width:15em; 
+      width:15em;
       margin-right: 18%;
       margin-bottom: 10%;
       margin-top: 6%;
-  } 
+  }
   #contentInput{
       margin-right: 9%;
       margin-bottom: 6%;
@@ -131,9 +131,9 @@ body {
         border: 3px solid white ;
         font-size: medium;
     }
-  
+
 }
-@media screen and (max-width: 650px){ 
+@media screen and (max-width: 650px){
   #greetingPageOne{
     border-radius: 25px;
     width:8em;
@@ -143,9 +143,10 @@ body {
     justify-content: center;
     margin-bottom: 10%;
     }
+
 }
 
-@media screen and (max-width: 450px){ 
+@media screen and (max-width: 450px){
   #titlePageOne{
     font: bolder 7vh Helvetica;
     text-align: center;
@@ -154,7 +155,7 @@ body {
   .descriptionPageOne{
       font-size: 120% ;
       width:15em;
-      line-height: 1.5em;   
+      line-height: 1.5em;
       margin-right: 12%;
   }
   #contentInput{
@@ -170,7 +171,7 @@ body {
       width:8.5em;
       margin-bottom: 23%;
       border-radius: 30px;
-      font-size: medium; 
+      font-size: medium;
   }
 }
 
@@ -326,13 +327,14 @@ body {
     border: 4px solid burlywood ;
     box-shadow: white 4px 4px 3px;
  }
- 
+
 /*RESPONSIVE*/
 @media(max-width: 768px){
     /*HEADER*/
     .show-menu,
     .hide-menu{
         display: block;
+
     }
     .menu{
         position: fixed;
@@ -360,7 +362,7 @@ body {
     display: block;
     transform: translateX(40%);/*cambia*/
 }
-    
+
     .hide-menu{
         position: absolute;
         top: 40px;
@@ -375,8 +377,14 @@ body {
         text-align: center;
         padding: 1%;
      }
-    
+    /*ocultar menu*/
+  .hideMenu{
+    display: none;
+  }
+
 }
+
+
 
 
 /*especificidad
