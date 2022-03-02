@@ -135,6 +135,13 @@ function showFilmsDirector(dataToPrint) {
 }
 function sortDataByMovieProducerAsc() {
   let orderData = sortData(data.films, "producer", ORDER_ASCENDENTE);
+  const onlyProducers = [];
+  orderData.forEach(p => {
+    if (onlyProducers.findIndex(pd => pd.producer === p.producer) === -1) {
+      // No existe; al detectar que no existe el mismo nombre, "la copiamos"
+      onlyProducers.push(p);
+    }
+  });
 
   //limpiar el div contentPageTwo
   const filmsDiv = document.getElementById("contentPageTwo");
@@ -142,19 +149,25 @@ function sortDataByMovieProducerAsc() {
 
   //pintar los objetos ya ordenados
   hideMenuNav();
-  showFilmsByProducer(orderData);
+  showFilmsByProducer(onlyProducers);
 }
 
 function sortDataByMovieProducerDes() {
   let orderData = sortData(data.films, "producer", ORDER_DESCENDENTE);
-
+  const onlyProducersDesc = [];
+  orderData.forEach(p => {
+    if (onlyProducersDesc.findIndex(pd => pd.producer === p.producer) === -1) {
+      // No existe; al detectar que no existe el mismo nombre, "la copiamos"
+      onlyProducersDesc.push(p);
+    }
+  });
   //limpiar el div contentPageTwo
   const filmsDiv = document.getElementById("contentPageTwo");
   filmsDiv.innerHTML = "";
 
   //pintar los objetos ya ordenados
   hideMenuNav();
-  showFilmsByProducer(orderData);
+  showFilmsByProducer(onlyProducersDesc);
 }
 
 let buttonSorByMovieProducerAsc = document.getElementById("sortDataByMovieProducerAsc");
