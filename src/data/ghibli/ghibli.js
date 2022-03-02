@@ -491,7 +491,7 @@ export default {
       "producer": "Toru Hara",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a5/Grave_of_the_Fireflies_Japanese_poster.jpg",
       "posterDirector":"https://ramenparados.com/wp-content/uploads/2019/06/takahata-300x450.jpg",
-      "posterProducer": "https://studioghibli.fandom.com/es/wiki/Toru_Hara?file=Toru_Hara.jpg",
+      "posterProducer": "https://i1.rgstatic.net/ii/profile.image/278076786266113-1443310080417_Q512/Toru-Hara.jpg",
       "release_date": "1988",
       "rt_score": "97",
       "people": [
