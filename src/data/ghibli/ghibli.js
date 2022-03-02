@@ -9,7 +9,7 @@ export default {
       "producer": "Isao Takahata",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg",
       "posterDirector":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
-      "posterProducer": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a9/Only_Yesterday.jpg",
+      "posterProducer": "https://ramenparados.com/wp-content/uploads/2019/06/takahata-300x450.jpg",
       "release_date": "1986",
       "rt_score": "95",
       "people": [
