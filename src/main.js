@@ -33,7 +33,6 @@ function showPage2() {
   });
 }
 
-
 function showFilms(dataToPrint) {
   const filmsDiv = document.getElementById("contentPageTwo");
   let allFilms = '';
@@ -60,6 +59,7 @@ function readPropertyFromFilm(data, property) {
   return data[property]
 }
 
+//Peliculas por TITULO
 function filterDataByMovieTitleAsc() {
   let orderData = sortData(data.films, "title", ORDER_ASCENDENTE);
 
@@ -163,6 +163,9 @@ function showFilmsDirector(dataToPrint) {
   }
   filmsDiv.innerHTML = allFilms;
 }
+
+
+//Ordenar las peliculas por PRODUCTORES
 function sortDataByMovieProducerAsc() {
   let orderData = sortData(data.films, "producer", ORDER_ASCENDENTE);
   const onlyProducers = [];
@@ -181,8 +184,6 @@ function sortDataByMovieProducerAsc() {
   hideMenuNav();
   showFilmsByProducer(onlyProducers);
 }
-
-//Ordenar las peliculas por PRODUCTORES
 function sortDataByMovieProducerDes() {
   let orderData = sortData(data.films, "producer", ORDER_DESCENDENTE);
   const onlyProducersDesc = [];
