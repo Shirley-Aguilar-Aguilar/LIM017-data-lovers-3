@@ -293,13 +293,6 @@ function showFilmsByYear(dataToPrint) {
 
 
 //BUSCADOR
-/*funcionalidad del boton*/
-const imgDiv = document.getElementById('buttonSearch')
-imgDiv.addEventListener('click', function () {
-  const textFilter = document.getElementById("seekerInput").value;
-  const filmsFiltered = filterData(arrayFilms, textFilter);
-  showFilms(filmsFiltered);
-})
 /*que busque al dar enter*/
 const elem = document.getElementById('seekerInput');
 elem.addEventListener("keyup", function (e) {
@@ -374,6 +367,5 @@ function showPage3(filmsDisplay, arrayFilms) {
     });
   }
 }
-
-
+//no comitear
 
