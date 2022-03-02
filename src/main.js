@@ -69,16 +69,16 @@ function filterDataByMovieTitleAsc() {
  hideMenuNav();
   //pintar los objetos ya ordenados
   showFilms(orderData);
-  /*mostrar historia 3*/
-  const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
-  showPage3(filmsDisplay, orderData)
-  //flecha para peliculas ascendente
-  arrowBack.addEventListener("click", ()=>{
-  const filmsDiv = document.getElementById("contentPageTwo");
-  filmsDiv.innerHTML = "";
-  arrowBack.style.display= "none";
-  filterDataByMovieTitleAsc()
-});
+   /*mostrar historia 3*/
+   const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
+   showPage3(filmsDisplay, orderData)
+   //flecha para peliculas ascendente
+   arrowBack.addEventListener("click", ()=>{
+   const filmsDiv = document.getElementById("contentPageTwo");
+   filmsDiv.innerHTML = "";
+   arrowBack.style.display= "none";
+   filterDataByMovieTitleAsc()
+ });
 }
 
 let buttonFilterByMovieTitleAsc = document.getElementById("filterDataByMovieTitleAsc");
@@ -90,16 +90,16 @@ function filterDataByMovieTitleDesc() {
   filmsDiv.innerHTML = "";
   hideMenuNav();
   showFilms(orderData);
-  /*mostrar historia 3*/
-  const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
-  showPage3(filmsDisplay, orderData)
-  //flecha para peliculas descendente
-  arrowBack.addEventListener("click", ()=>{
-    const filmsDiv = document.getElementById("contentPageTwo");
-    filmsDiv.innerHTML = "";
-    arrowBack.style.display= "none";
-    filterDataByMovieTitleDesc()
-  });  
+   /*mostrar historia 3*/
+   const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
+   showPage3(filmsDisplay, orderData)
+   //flecha para peliculas descendente
+   arrowBack.addEventListener("click", ()=>{
+     const filmsDiv = document.getElementById("contentPageTwo");
+     filmsDiv.innerHTML = "";
+     arrowBack.style.display= "none";
+     filterDataByMovieTitleDesc()
+   });  
 }
 let buttonFilterByMovieTitleDesc = document.getElementById("filterDataByMovieTitleDesc");
 buttonFilterByMovieTitleDesc.addEventListener("click", filterDataByMovieTitleDesc);
@@ -126,6 +126,7 @@ function filterDataByMovieDirectorAsc() {
   hideMenuNav();
   showFilmsDirector(onlyDirectors);
 }
+
 //----------evento descendente-----------
 let buttonFilterByMovieDirectorDesc = document.getElementById("filterDataByMovieDirectorDesc");
 buttonFilterByMovieDirectorDesc.addEventListener("click", filterDataByMovieDirectorDesc);
@@ -182,7 +183,6 @@ function sortDataByMovieProducerAsc() {
   showFilmsByProducer(onlyProducers);
 }
 
-//Ordenar las peliculas por PRODUCTORES
 function sortDataByMovieProducerDes() {
   let orderData = sortData(data.films, "producer", ORDER_DESCENDENTE);
   const onlyProducersDesc = [];
@@ -206,23 +206,6 @@ buttonSorByMovieProducerAsc.addEventListener("click", sortDataByMovieProducerAsc
 
 let buttonSorByMovieProducerDes = document.getElementById("sortDataByMovieProducerDes");
 buttonSorByMovieProducerDes.addEventListener("click", sortDataByMovieProducerDes)
-//
-function showFilmsByProducer(dataToPrint) {
-  const filmsDiv = document.getElementById("contentPageTwo");
-  let allFilms = '';
-
-  for (let i = 0; i < dataToPrint.length; i++) {
-    let filmDiv = `<article id="producer${[i]}">`
-    filmDiv = filmDiv + '<img src="' + readPropertyFromFilm(dataToPrint[i], "posterProducer") + '">';
-    filmDiv = filmDiv + '<h2>'
-    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "producer") + '<br>';
-    filmDiv = filmDiv + '</h2>'
-    filmDiv = filmDiv + '</article>'
-    allFilms = filmDiv + allFilms
-  }
-  filmsDiv.innerHTML = allFilms;
-}
-
 
 
 //para ordenar las peliculas por año
@@ -234,16 +217,6 @@ function filterDataByYearAsc() {
   //pintar los objetos ya ordenados
   hideMenuNav();
   showFilmsByYear(orderData);
-  /*Historia 3*/
-  const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
-  showPage3(filmsDisplay, orderData)
-  //flecha para peliculas ascendente
-  arrowBack.addEventListener("click", ()=>{
-  const filmsDiv = document.getElementById("contentPageTwo");
-  filmsDiv.innerHTML = "";
-  arrowBack.style.display= "none";
-  filterDataByYearAsc()
-});
 }
 
 function filterDataByYearDes() {
@@ -254,16 +227,6 @@ function filterDataByYearDes() {
   //pintar los objetos ya ordenados
   hideMenuNav();
   showFilmsByYear(orderData);
-  /*Historia 3*/
-  const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
-  showPage3(filmsDisplay, orderData)
-  //flecha para peliculas ascendente
-  arrowBack.addEventListener("click", ()=>{
-  const filmsDiv = document.getElementById("contentPageTwo");
-  filmsDiv.innerHTML = "";
-  arrowBack.style.display= "none";
-  filterDataByYearDes()
-});
 }
 const buttonFilterByYearAsc = document.getElementById("filterDataByYearAsc");
 buttonFilterByYearAsc.addEventListener("click", filterDataByYearAsc)
@@ -272,11 +235,29 @@ const buttonFilterByYearDes = document.getElementById("filterDataByYearDes");
 buttonFilterByYearDes.addEventListener("click", filterDataByYearDes)
 
 
+function showFilmsByProducer(dataToPrint) {
+  const filmsDiv = document.getElementById("contentPageTwo");
+  let allFilms = '';
+
+  for (let i = 0; i < dataToPrint.length; i++) {
+    let filmDiv = `<article id="filmByProducer${[i]}">`
+    filmDiv = filmDiv + '<img src="' + readPropertyFromFilm(dataToPrint[i], "posterProducer") + '">';
+    filmDiv = filmDiv + '<h2>'
+    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "producer") + '<br>';
+    filmDiv = filmDiv + '</h2>'
+    filmDiv = filmDiv + '</article>'
+    allFilms = filmDiv + allFilms
+  }
+  filmsDiv.innerHTML = allFilms;
+
+
+
+}
 function showFilmsByYear(dataToPrint) {
   const filmsDiv = document.getElementById("contentPageTwo");
   let allFilms = '';
   for (let i = 0; i < dataToPrint.length; i++) {
-    let filmDiv = `<div id="filmByYear${[i]}">`
+    let filmDiv = `<div id="film${[i]}">`
     filmDiv = filmDiv + '<img src="' + readPropertyFromFilm(dataToPrint[i], "poster") + '">';
     filmDiv = filmDiv + '<h3>'
     filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "title") + '<br>';
@@ -291,7 +272,6 @@ function showFilmsByYear(dataToPrint) {
 }
 
 
-//BUSCADOR
 /*funcionalidad del boton*/
 const imgDiv = document.getElementById('buttonSearch')
 imgDiv.addEventListener('click', function () {
@@ -316,7 +296,6 @@ elem.addEventListener("keyup", function () {
 });
 /*datos en minuscula
 1ra letra a lower y 2da+ upper*/
-
 
 //ocultar menu de navegador
 let clickLabelCheck = document.getElementById("labelCheck");
@@ -373,6 +352,12 @@ function showPage3(filmsDisplay, arrayFilms) {
     });
   }
 }
-
-
+/*flecha para volver a historia 2*/
+const arrowBack = document.getElementById("arrowBack");
+arrowBack.addEventListener("click", ()=>{
+  const filmsDiv = document.getElementById("contentPageTwo");
+  filmsDiv.innerHTML = "";
+  arrowBack.style.display= "none";
+  showPage2()
+})
 
