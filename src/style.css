@@ -229,7 +229,7 @@ body {
 .menu ul {
     display: flex;
     list-style: none;
-    font-size: x-large;
+    font-size: large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .menu li a {
@@ -328,6 +328,13 @@ body {
     box-shadow: white 4px 4px 3px;
  }
 
+ #arrowBack{
+    height:10vh;
+    width:5vw;
+    margin-bottom: 80px;
+    margin-left: 45%;
+ }
+ 
 /*RESPONSIVE*/
 @media(max-width: 768px){
     /*HEADER*/
