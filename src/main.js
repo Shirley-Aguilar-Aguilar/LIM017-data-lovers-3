@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js';
-import { filterData, sortData } from './data.js';
+import { filterData, sortData, computeStats } from './data.js';
 import { ORDER_ASCENDENTE, ORDER_DESCENDENTE } from './data.js';
 
 const arrayFilms = data.films;
@@ -331,11 +331,6 @@ function showMenuNav(){
 
 }
 
-
-/*function computeStats (){
-}*/
-
-
 /*mostrar historia 3*/
 function showPage3(filmsDisplay, arrayFilms) {
   const filmsDiv = document.getElementById("contentPageTwo");
@@ -367,5 +362,81 @@ function showPage3(filmsDisplay, arrayFilms) {
     });
   }
 }
-//no comitear
+
+function computeTotalNumberOfSpecie(specie) {
+  //limpiar el div contentPageTwo
+  const filmsDiv = document.getElementById("contentPageTwo");
+  filmsDiv.innerHTML = "";
+  //contador
+  let numberOfSpecie = computeStats(arrayFilms, specie);
+  hideMenuNav();
+  showFilmsDataPeople(numberOfSpecie);
+}
+
+function computeTotalNumberOfHuman() {
+  computeTotalNumberOfSpecie("Human");
+}
+function computeTotalNumberOfCats() {
+  computeTotalNumberOfSpecie("Cat");
+  document.getElementById("imageCats");
+}
+function computeTotalNumberOfTotoro() {
+  computeTotalNumberOfSpecie("Totoro");
+}
+function computeTotalNumberOfWitch() {
+  computeTotalNumberOfSpecie("Witch");
+}
+
+function computeTotalNumberOfRaccon() {
+  computeTotalNumberOfSpecie("Raccoon Dog");
+}
+ function computeTotalNumberOfRedelk() {
+  computeTotalNumberOfSpecie("Red elk");
+} 
+function computeTotalNumberOfSpirit() {
+  computeTotalNumberOfSpecie("Spirit"); 
+}
+function computeTotalNumberOfWolf() {
+  computeTotalNumberOfSpecie("Wolf");
+ 
+}
+
+//mostrando conteo-------
+function showFilmsDataPeople(dataToPrint) {
+  let allFilms="";
+  const filmsDiv = document.getElementById("contentPageTwo");
+  let filmDiv = `<article style="font-size:xx-larger; width:90% ">`
+  filmDiv = filmDiv + '<img src="img/people.jpg">'
+  filmDiv = filmDiv + '<img src="img/3people.jpg">'
+  filmDiv = filmDiv + '<img src="img/Studio-Ghibli.jpg">'
+  filmDiv = filmDiv + '<br><br><br><h1><strong>En esta web del Studio Ghibli, la cantidad de este personaje es : '+dataToPrint+ '</strong></h1>'
+  filmDiv = filmDiv + '</article>'
+  allFilms = filmDiv + allFilms
+  filmsDiv.innerHTML = allFilms; 
+}
+// evento de compute stats
+
+const buttonFilterDataByHuman = document.getElementById("filterDataByHuman");
+buttonFilterDataByHuman.addEventListener("click", computeTotalNumberOfHuman);
+
+const buttonFilterDataByCats = document.getElementById("filterDataByCats");
+buttonFilterDataByCats.addEventListener("click", computeTotalNumberOfCats);
+
+const buttonFilterDataByTotoro = document.getElementById("filterDataByTotoros");
+buttonFilterDataByTotoro.addEventListener("click", computeTotalNumberOfTotoro);
+
+const buttonFilterDataByWitch = document.getElementById("filterDataByWitch");
+buttonFilterDataByWitch.addEventListener("click", computeTotalNumberOfWitch);
+
+const buttonFilterDataByRaccon = document.getElementById("filterDataByRaccon");
+buttonFilterDataByRaccon.addEventListener("click", computeTotalNumberOfRaccon);
+
+const buttonFilterDataByRedelk = document.getElementById("filterDataByRedelk");
+buttonFilterDataByRedelk.addEventListener("click", computeTotalNumberOfRedelk);
+
+const buttonFilterDataBySpirit = document.getElementById("filterDataBySpirit");
+buttonFilterDataBySpirit.addEventListener("click", computeTotalNumberOfSpirit);
+
+const buttonFilterDataByWolf = document.getElementById("filterDataByWolf");
+buttonFilterDataByWolf.addEventListener("click", computeTotalNumberOfWolf);
 

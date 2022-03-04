@@ -13,7 +13,7 @@ body {
     vw = 1% viewpoint width*/
 }
 #pageOne{
-    background: url(fondo1.jpg) no-repeat center center; /* la imagen a ser mostrada a pantalla completa */
+    background: url(img/fondo1.jpg) no-repeat center center; /* la imagen a ser mostrada a pantalla completa */
     height: 100%;
     width: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
     background-size: cover; /* Propiedad a utilizar para la imagen */
@@ -179,7 +179,7 @@ body {
 #pageTwo{
     height: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
     width: 100%;
-    background: url(fondo2.jpg) no-repeat center center;
+    background: url(img/fondo2.jpg) no-repeat center center;
     background-size: cover;
     overflow: scroll;
 }
@@ -379,7 +379,7 @@ body {
   }
 
 }
-
+ 
 
 
 
