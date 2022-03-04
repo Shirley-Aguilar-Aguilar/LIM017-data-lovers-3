@@ -279,13 +279,14 @@ body {
 
 #contentPageTwo{
     display: flex;
-    flex-direction:row-reverse ;
-    flex-wrap: wrap-reverse;
+    flex-direction:row ;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items:center;
+    padding-bottom: 0;
 }
 
-#contentPageTwo > div{
+#contentPageTwo > div{ /*vista 5 peliculas por fila, desorden, titulo, año*/
     width: 20%;
     text-align: center;
     margin-bottom: 6%;
@@ -293,7 +294,7 @@ body {
     padding: 1%;
  }
 
- img{
+ img{ /*todas las peliculas*/
     height: 180px;
     width: 130px;
      border-radius: 25px;
@@ -309,7 +310,7 @@ body {
     padding: 1%;
  }
 
- #contentPageTwo > article img{
+ #contentPageTwo > article img{ /*productores y directores*/
     height: 200px;
     width: 160px;
     border-radius: 25px;
@@ -317,11 +318,31 @@ body {
     box-shadow: white 4px 4px 3px;
  }
 
- #arrowBack{
-    height:10vh;
-    width:5vw;
-    margin-bottom: 80px;
-    margin-left: 45%;
+ #arrowBack{ /*flecha volver a historia 2*/
+    height: 8%;
+    width: 4em;
+    margin-bottom: 5%;
+    margin-left: 15%;
+ }
+ #counterOfPeople{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    flex-direction: column;
+    text-shadow: burlywood ;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ #contentPageTwo > aside img{
+     width: 40%;
+     height: 25%;
+ } 
+
+ #contentPageTwo #storyThree > img{
+     height: 32%;
+     width: 28%;
  }
  
 /*RESPONSIVE*/
@@ -367,12 +388,27 @@ body {
     /* #check:checked ~ .menu{
         right: 0 ;
     } */
-
-    #contentPageTwo > div{
+    #contentPageTwo > div{ /*para todas las peliculas*/
         width: 50%;
         text-align: center;
         padding: 1%;
      }
+     #contentPageTwo > article{ /*productores y directores*/
+        width: 50%;
+        text-align: center;
+        padding: 1%;
+     }
+     #arrowBack{ /*flecha volver a historia 2*/
+        height: 8%;
+        width: 4em;
+        margin-bottom: 5%;
+        margin-left: 5%;
+     }
+     #seeker{
+        width: 50%;
+        transform: translateX(50%);
+    }
+
     /*ocultar menu*/
   .hideMenu{
     display: none;

@@ -1,11 +1,9 @@
 import data from './data/ghibli/ghibli.js';
-import { filterData, sortData, computeStats } from './data.js';
-import { ORDER_ASCENDENTE, ORDER_DESCENDENTE } from './data.js';
+import { filterData, sortData, computeStats, ORDER_ASCENDENTE, ORDER_DESCENDENTE } from './data.js';
 
 const arrayFilms = data.films;
 /*flecha para volver a historia 2*/
 const arrowBack = document.getElementById("arrowBack");
-
 //PRIMERA HISTORIA
 const buttonAccess = document.getElementById("buttonAccess");
 buttonAccess.addEventListener("click", showPage);
@@ -25,64 +23,62 @@ function showPage2() {
   const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
   showPage3(filmsDisplay, arrayFilms);
   /*volver a historia 2*/
-  arrowBack.addEventListener("click", ()=>{
+  arrowBack.addEventListener("click", () => {
     const filmsDiv = document.getElementById("contentPageTwo");
     filmsDiv.innerHTML = "";
-    arrowBack.style.display= "none";
-    showPage2()
+    arrowBack.style.display = "none";
+    /*historia 2*/
+    showFilms(arrayFilms);
+    /*mostrar historia 3*/
+    const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
+    showPage3(filmsDisplay, arrayFilms);
   });
 }
-
+//Mostrar peliculas: Sin orden
 function showFilms(dataToPrint) {
   const filmsDiv = document.getElementById("contentPageTwo");
-  let allFilms = '';
-
-  for (let i = 0; i < dataToPrint.length; i++) {
-    let filmDiv = `<div id="film${[i]}">`
-    filmDiv = filmDiv + '<img src="' + readPropertyFromFilm(dataToPrint[i], "poster") + '">';
-    filmDiv = filmDiv + '<h2>'
-    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "title") + '<br>';
-    filmDiv = filmDiv + '</h2>'
-    filmDiv = filmDiv + '<h4>'
-    filmDiv = filmDiv + '<p>Director: ' + readPropertyFromFilm(dataToPrint[i], "director") + '</p>';
-    filmDiv = filmDiv + '<p>Productor: ' + readPropertyFromFilm(dataToPrint[i], "producer") + '</p>';
-    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "release_date") + '<br>';
-    filmDiv = filmDiv + '</h4>'
-    filmDiv = filmDiv + '</div>'
-    allFilms = filmDiv + allFilms
-  }
-  filmsDiv.innerHTML = allFilms;
-}
-
-//manejo del DOM
-function readPropertyFromFilm(data, property) {
-  return data[property]
+  let filmDiv = '';
+  dataToPrint.forEach(e => {
+    filmDiv += `<div id="film${[e.id]}">
+                   <img src="${e.poster}">
+                   <h2> ${e.title}</h2>
+                   <h4>
+                   <p>Director: ${e.director}</p>
+                   <p>Productor: ${e.producer}</p>
+                   <p>${e.release_date}<p>
+                   </h4>
+                   </div>`;
+  });
+  filmsDiv.innerHTML = filmDiv;
+  return filmsDiv;
 }
 
 //Peliculas por TITULO
+let buttonFilterByMovieTitleAsc = document.getElementById("filterDataByMovieTitleAsc");
+buttonFilterByMovieTitleAsc.addEventListener("click", filterDataByMovieTitleAsc); //llama a las films ordenados A-Z
+
 function filterDataByMovieTitleAsc() {
   let orderData = sortData(data.films, "title", ORDER_ASCENDENTE);
-
   //limpiar el div contentPageTwo
   const filmsDiv = document.getElementById("contentPageTwo");
   filmsDiv.innerHTML = "";
- hideMenuNav();
+  hideMenuNav();
   //pintar los objetos ya ordenados
   showFilms(orderData);
   /*mostrar historia 3*/
   const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
   showPage3(filmsDisplay, orderData)
-  //flecha para peliculas ascendente
-  arrowBack.addEventListener("click", ()=>{
-  const filmsDiv = document.getElementById("contentPageTwo");
-  filmsDiv.innerHTML = "";
-  arrowBack.style.display= "none";
-  filterDataByMovieTitleAsc()
-});
+  //flecha para vlver a peliculas ascendente
+  arrowBack.addEventListener("click", () => {
+    const filmsDiv = document.getElementById("contentPageTwo");
+    filmsDiv.innerHTML = "";
+    arrowBack.style.display = "none";
+    filterDataByMovieTitleAsc()
+  });
 }
 
-let buttonFilterByMovieTitleAsc = document.getElementById("filterDataByMovieTitleAsc");
-buttonFilterByMovieTitleAsc.addEventListener("click", filterDataByMovieTitleAsc);
+let buttonFilterByMovieTitleDesc = document.getElementById("filterDataByMovieTitleDesc");
+buttonFilterByMovieTitleDesc.addEventListener("click", filterDataByMovieTitleDesc); //llama a las films ordenados Z-A
 
 function filterDataByMovieTitleDesc() {
   let orderData = sortData(data.films, "title", ORDER_DESCENDENTE);
@@ -94,16 +90,13 @@ function filterDataByMovieTitleDesc() {
   const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
   showPage3(filmsDisplay, orderData)
   //flecha para peliculas descendente
-  arrowBack.addEventListener("click", ()=>{
+  arrowBack.addEventListener("click", () => {
     const filmsDiv = document.getElementById("contentPageTwo");
     filmsDiv.innerHTML = "";
-    arrowBack.style.display= "none";
+    arrowBack.style.display = "none";
     filterDataByMovieTitleDesc()
-  });  
+  });
 }
-let buttonFilterByMovieTitleDesc = document.getElementById("filterDataByMovieTitleDesc");
-buttonFilterByMovieTitleDesc.addEventListener("click", filterDataByMovieTitleDesc);
-
 
 //EVENTOS PARA DIRECTORES
 //----------evento ascendente-----------
@@ -143,7 +136,7 @@ function filterDataByMovieDirectorDesc() {
   const filmsDiv = document.getElementById("contentPageTwo");
   filmsDiv.innerHTML = "";
   //mostrar directores
-   hideMenuNav();
+  hideMenuNav();
   showFilmsDirector(onlyDirectors);
 }
 
@@ -153,19 +146,19 @@ function showFilmsDirector(dataToPrint) {
   let allFilms = '';
 
   for (let i = 0; i < dataToPrint.length; i++) {
-    let filmDiv = `<article id="director${[i]}">`
-    filmDiv = filmDiv + '<img src="' + readPropertyFromFilm(dataToPrint[i], "posterDirector") + '">';
-    filmDiv = filmDiv + '<h2>'
-    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "director") + '<br>';
-    filmDiv = filmDiv + '</h2>'
-    filmDiv = filmDiv + '</article>'
-    allFilms = filmDiv + allFilms
+    let filmDiv = `<article id="director${[i]}">
+                   <img src="${dataToPrint[i].posterDirector}">
+                   <h2>${dataToPrint[i].director}</h2>
+                   </article>`
+    allFilms += filmDiv
   }
   filmsDiv.innerHTML = allFilms;
 }
 
+//Ordena las peliculas por PRODUCTORES
+let buttonSorByMovieProducerAsc = document.getElementById("sortDataByMovieProducerAsc");
+buttonSorByMovieProducerAsc.addEventListener("click", sortDataByMovieProducerAsc); // ordena A-Z
 
-//Ordenar las peliculas por PRODUCTORES
 function sortDataByMovieProducerAsc() {
   let orderData = sortData(data.films, "producer", ORDER_ASCENDENTE);
   const onlyProducers = [];
@@ -175,15 +168,17 @@ function sortDataByMovieProducerAsc() {
       onlyProducers.push(p);
     }
   });
-
   //limpiar el div contentPageTwo
   const filmsDiv = document.getElementById("contentPageTwo");
   filmsDiv.innerHTML = "";
-
   //pintar los objetos ya ordenados
   hideMenuNav();
   showFilmsByProducer(onlyProducers);
 }
+
+let buttonSorByMovieProducerDes = document.getElementById("sortDataByMovieProducerDes");
+buttonSorByMovieProducerDes.addEventListener("click", sortDataByMovieProducerDes);
+
 function sortDataByMovieProducerDes() {
   let orderData = sortData(data.films, "producer", ORDER_DESCENDENTE);
   const onlyProducersDesc = [];
@@ -196,37 +191,29 @@ function sortDataByMovieProducerDes() {
   //limpiar el div contentPageTwo
   const filmsDiv = document.getElementById("contentPageTwo");
   filmsDiv.innerHTML = "";
-
   //pintar los objetos ya ordenados
   hideMenuNav();
   showFilmsByProducer(onlyProducersDesc);
 }
 
-let buttonSorByMovieProducerAsc = document.getElementById("sortDataByMovieProducerAsc");
-buttonSorByMovieProducerAsc.addEventListener("click", sortDataByMovieProducerAsc)
-
-let buttonSorByMovieProducerDes = document.getElementById("sortDataByMovieProducerDes");
-buttonSorByMovieProducerDes.addEventListener("click", sortDataByMovieProducerDes)
-//
+//Muestra los productores
 function showFilmsByProducer(dataToPrint) {
-  const filmsDiv = document.getElementById("contentPageTwo");
-  let allFilms = '';
-
-  for (let i = 0; i < dataToPrint.length; i++) {
-    let filmDiv = `<article id="producer${[i]}">`
-    filmDiv = filmDiv + '<img src="' + readPropertyFromFilm(dataToPrint[i], "posterProducer") + '">';
-    filmDiv = filmDiv + '<h2>'
-    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "producer") + '<br>';
-    filmDiv = filmDiv + '</h2>'
-    filmDiv = filmDiv + '</article>'
-    allFilms = filmDiv + allFilms
-  }
-  filmsDiv.innerHTML = allFilms;
+  const producersDiv = document.getElementById("contentPageTwo");
+  let producerDiv = "";
+  dataToPrint.forEach(e => {
+    producerDiv += `<article id="producer${[e.id]}">
+                     <img src="${e.posterProducer}">
+                     <h2> ${e.producer}</h2>
+                     </article>`;
+  });
+  producersDiv.innerHTML = producerDiv;
+  return producersDiv;
 }
 
-
-
 //para ordenar las peliculas por año
+const buttonFilterByYearAsc = document.getElementById("filterDataByYearAsc");
+buttonFilterByYearAsc.addEventListener("click", filterDataByYearAsc);
+
 function filterDataByYearAsc() {
   const orderData = sortData(data.films, "release_date", ORDER_ASCENDENTE);
   //limpiar el div contentPageTwo
@@ -239,13 +226,16 @@ function filterDataByYearAsc() {
   const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
   showPage3(filmsDisplay, orderData)
   //flecha para peliculas ascendente
-  arrowBack.addEventListener("click", ()=>{
-  const filmsDiv = document.getElementById("contentPageTwo");
-  filmsDiv.innerHTML = "";
-  arrowBack.style.display= "none";
-  filterDataByYearAsc()
-});
+  arrowBack.addEventListener("click", () => {
+    const filmsDiv = document.getElementById("contentPageTwo");
+    filmsDiv.innerHTML = "";
+    arrowBack.style.display = "none";
+    filterDataByYearAsc()
+  });
 }
+
+const buttonFilterByYearDes = document.getElementById("filterDataByYearDes");
+buttonFilterByYearDes.addEventListener("click", filterDataByYearDes);
 
 function filterDataByYearDes() {
   const orderData = sortData(data.films, "release_date", ORDER_DESCENDENTE);
@@ -259,39 +249,29 @@ function filterDataByYearDes() {
   const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
   showPage3(filmsDisplay, orderData)
   //flecha para peliculas ascendente
-  arrowBack.addEventListener("click", ()=>{
-  const filmsDiv = document.getElementById("contentPageTwo");
-  filmsDiv.innerHTML = "";
-  arrowBack.style.display= "none";
-  filterDataByYearDes()
-});
+  arrowBack.addEventListener("click", () => {
+    const filmsDiv = document.getElementById("contentPageTwo");
+    filmsDiv.innerHTML = "";
+    arrowBack.style.display = "none";
+    filterDataByYearDes()
+  });
 }
-const buttonFilterByYearAsc = document.getElementById("filterDataByYearAsc");
-buttonFilterByYearAsc.addEventListener("click", filterDataByYearAsc)
-
-const buttonFilterByYearDes = document.getElementById("filterDataByYearDes");
-buttonFilterByYearDes.addEventListener("click", filterDataByYearDes)
-
 
 function showFilmsByYear(dataToPrint) {
   const filmsDiv = document.getElementById("contentPageTwo");
-  let allFilms = '';
-  for (let i = 0; i < dataToPrint.length; i++) {
-    let filmDiv = `<div id="filmByYear${[i]}">`
-    filmDiv = filmDiv + '<img src="' + readPropertyFromFilm(dataToPrint[i], "poster") + '">';
-    filmDiv = filmDiv + '<h3>'
-    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "title") + '<br>';
-    filmDiv = filmDiv + '</h3>'
-    filmDiv = filmDiv + '<h1>'
-    filmDiv = filmDiv + readPropertyFromFilm(dataToPrint[i], "release_date") + '<br>';
-    filmDiv = filmDiv + '</h1>'
-    filmDiv = filmDiv + '</div>'
-    allFilms = filmDiv + allFilms
-  }
-  filmsDiv.innerHTML = allFilms;
+  let filmDiv = '';
+  dataToPrint.forEach(e => {
+    filmDiv += `<div id="film${[e.id]}">
+                     <img src="${e.poster}">
+                     <h2> ${e.title}</h2>
+                     <h1>
+                     <p>${e.release_date}<p>
+                     </h1>
+                     </div>`;
+  });
+  filmsDiv.innerHTML = filmDiv;
+  return filmsDiv;
 }
-
-
 //BUSCADOR
 /*que busque al dar enter*/
 const elem = document.getElementById('seekerInput');
@@ -300,6 +280,18 @@ elem.addEventListener("keyup", function (e) {
     const textFilter = document.getElementById("seekerInput").value;
     const filmsFiltered = filterData(arrayFilms, textFilter);
     showFilms(filmsFiltered);
+    /*mostrar historia 3*/
+    const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
+    showPage3(filmsDisplay, filmsFiltered);
+    /*volver a historia 2*/
+    arrowBack.addEventListener("click", () => {
+      const filmsDiv = document.getElementById("contentPageTwo");
+      filmsDiv.innerHTML = "";
+      arrowBack.style.display = "none";
+      showFilms(filmsFiltered);
+      const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
+      showPage3(filmsDisplay, filmsFiltered);
+    });
   }
 });
 /*para que la busqueda se de mientras se escribe*/
@@ -307,61 +299,66 @@ elem.addEventListener("keyup", function () {
   const textFilter = document.getElementById("seekerInput").value;
   const filmsFiltered = filterData(arrayFilms, textFilter);
   showFilms(filmsFiltered);
+  /*mostrar historia 3*/
+  const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
+  showPage3(filmsDisplay, filmsFiltered);
+  /*volver a historia 2*/
+  arrowBack.addEventListener("click", () => {
+    const filmsDiv = document.getElementById("contentPageTwo");
+    filmsDiv.innerHTML = "";
+    arrowBack.style.display = "none";
+    showFilms(filmsFiltered);
+    const filmsDisplay = document.querySelectorAll(`div[id^="film"]`);
+    showPage3(filmsDisplay, filmsFiltered);
+  });
 });
-/*datos en minuscula
-1ra letra a lower y 2da+ upper*/
-
 
 //ocultar menu de navegador
 let clickLabelCheck = document.getElementById("labelCheck");
-clickLabelCheck.addEventListener("click",hideMenuNav);
+clickLabelCheck.addEventListener("click", hideMenuNav);
 
-function hideMenuNav(){
- let navegadorMenu = document.getElementById("navMenu")
+function hideMenuNav() {
+  let navegadorMenu = document.getElementById("navMenu")
   navegadorMenu.classList.add('hideMenu')
-
 }
 // mostrar menu de navegador
 let clickLabelShow = document.getElementById("checkLabelShow");
-clickLabelShow.addEventListener("click",showMenuNav);
+clickLabelShow.addEventListener("click", showMenuNav);
 
-function showMenuNav(){
+function showMenuNav() {
   let navegadorMenu = document.getElementById("navMenu")
   navegadorMenu.classList.remove('hideMenu')
-
 }
 
 /*mostrar historia 3*/
-function showPage3(filmsDisplay, arrayFilms) {
+function showPage3(filmsDisplay, array) {
   const filmsDiv = document.getElementById("contentPageTwo");
-  let allFilms = '';
+  let filmInfo = '';
 
   for (let i = 0; i < filmsDisplay.length; i++) {
-    filmsDisplay[i].addEventListener('click', function filmInformation() {
+    filmsDisplay[i].addEventListener('click', () => {
 
-      for (let y = 0; y < arrayFilms.length; y++) {
-        if (i == y) {
-          const j = Math.abs(y-19)
-          let filmDiv = `<div style="display:block;text-align:justify;width:70%;">`
-          filmDiv = filmDiv + '<img style="height:40vh;width:16vw;" src="' + arrayFilms[j].poster + '"><br><br>';
-          filmDiv = filmDiv + '<h2>'
-          filmDiv = filmDiv + arrayFilms[j].title + '<br> <br>';
-          filmDiv = filmDiv + '</h2>'
-          filmDiv = filmDiv + '<h4>'
-          filmDiv = filmDiv + '<p>Director: ' + arrayFilms[j].director + '</p><br>';
-          filmDiv = filmDiv + '<p>Productor: ' + arrayFilms[j].producer + '</p><br>';
-          filmDiv = filmDiv + '</p>Release date: ' + arrayFilms[j].release_date + '</p><br>';
-          filmDiv = filmDiv + '<p>Description: ' + arrayFilms[j].description + '</p>';
-          filmDiv = filmDiv + '</h4>'
-          filmDiv = filmDiv + '</div>'
-          allFilms = filmDiv + allFilms
+      for (let j = 0; j < array.length; j++) {
+        if (i == j) {
+          let filmDiv = `<div id="storyThree" style="width:70%;align-items: center;text-align: left;display: flex;flex-direction:column">
+                         <h1> ${array[j].title}</h1><br><br>
+                         <img src="${array[j].poster}"><br>
+                         <h3>
+                         <p>Director: ${array[j].director}</p><br>
+                         <p>Productor: ${array[j].producer}</p><br>
+                         <p>Release date: ${array[j].release_date}<p><br>
+                         <p>Description:${array[j].description}<p>
+                         </h3>
+                         </div>`;
+          filmInfo = filmDiv
         }
-        filmsDiv.innerHTML = allFilms;
-        arrowBack.style.display= "";
+        filmsDiv.innerHTML = filmInfo
+        arrowBack.style.display = "";
       }
     });
   }
 }
+
 
 function computeTotalNumberOfSpecie(specie) {
   //limpiar el div contentPageTwo
@@ -390,29 +387,27 @@ function computeTotalNumberOfWitch() {
 function computeTotalNumberOfRaccon() {
   computeTotalNumberOfSpecie("Raccoon Dog");
 }
- function computeTotalNumberOfRedelk() {
+function computeTotalNumberOfRedelk() {
   computeTotalNumberOfSpecie("Red elk");
-} 
+}
 function computeTotalNumberOfSpirit() {
-  computeTotalNumberOfSpecie("Spirit"); 
+  computeTotalNumberOfSpecie("Spirit");
 }
 function computeTotalNumberOfWolf() {
   computeTotalNumberOfSpecie("Wolf");
- 
+
 }
 
 //mostrando conteo-------
 function showFilmsDataPeople(dataToPrint) {
-  let allFilms="";
-  const filmsDiv = document.getElementById("contentPageTwo");
-  let filmDiv = `<article style="font-size:xx-larger; width:90% ">`
-  filmDiv = filmDiv + '<img src="img/people.jpg">'
-  filmDiv = filmDiv + '<img src="img/3people.jpg">'
-  filmDiv = filmDiv + '<img src="img/Studio-Ghibli.jpg">'
-  filmDiv = filmDiv + '<br><br><br><h1><strong>En esta web del Studio Ghibli, la cantidad de este personaje es : '+dataToPrint+ '</strong></h1>'
-  filmDiv = filmDiv + '</article>'
-  allFilms = filmDiv + allFilms
-  filmsDiv.innerHTML = allFilms; 
+  let allFilms = "";
+  const FILMS_DIV = document.getElementById("contentPageTwo");
+  let filmDiv = `<aside id="counterOfPeople">
+                 <h1><strong>En esta web del Studio Ghibli, <br> la cantidad de este personaje es : ${dataToPrint} </strong></h1><br>
+                 <img src="img/people.jpg"><br><br>
+                 </aside>`
+  allFilms = filmDiv;
+  FILMS_DIV.innerHTML = allFilms;
 }
 // evento de compute stats
 
