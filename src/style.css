@@ -13,7 +13,7 @@ body {
     vw = 1% viewpoint width*/
 }
 #pageOne{
-    background: url(fondo1.jpg) no-repeat center center; /* la imagen a ser mostrada a pantalla completa */
+    background: url(img/fondo1.jpg) no-repeat center center; /* la imagen a ser mostrada a pantalla completa */
     height: 100%;
     width: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
     background-size: cover; /* Propiedad a utilizar para la imagen */
@@ -23,7 +23,6 @@ body {
     color: white;
     text-align: center;
     padding-top: 5%;
-    margin-bottom: 12%;
     -webkit-text-stroke: 2px rgb(26, 83, 26) ;
     font: bolder 8.2vh Helvetica;
     text-shadow: rgb(25, 104, 25) 5px 4px 3px;
@@ -32,12 +31,14 @@ body {
 #contentPageOne{
     display: flex;
     flex-direction:row ;
-    flex-wrap: wrap-reverse;
     justify-content: space-around;
     align-items:center ;
+    flex-wrap: wrap-reverse;
+    width:calc(90%-10%);
+    margin: 10%;
 }
 .descriptionPageOne{
-  border-color: green ;
+    border-color: green ;
     background-color: white;
     font-size: 200% ;
     text-align: center;
@@ -46,7 +47,6 @@ body {
     border-radius: 30px;
     border: 3px solid green;
     box-shadow: rgb(25, 104, 25) 3px 3px 3px;;
-    margin-left: 14%;
     padding: 1% 1% 1% 1%;
     line-height: 1.7em;
 }
@@ -57,7 +57,6 @@ body {
     flex-direction:column ;
     justify-content: space-between;
     align-items:center ;
-    margin-right: 20%;
 }
 #userInput{
     height: 3.5em;
@@ -88,134 +87,138 @@ body {
     color: rgb(13, 70, 13);
     width:14em;
     padding: 2% 2% 2% 2%;
-    margin-left: 35%;
+    margin-left: 33%;
     line-height: 1.7em;
     background-color: white;
     font-size: 250% ;
     color: black;
+    margin-top: 10%;
 }
 
-/*usando media queries para característica responsiva Historia 1*/
-
+/*usando media queries para característica responsiva Historia 1 MAX-WIDTH 1400PX*/
 @media screen and (max-width: 1400px){
-  #titlePageOne{
-    margin-bottom: 4%;
-  }
-  .descriptionPageOne{
-      font-size: 170% ;
-      width:15em;
-      margin-right: 18%;
-      margin-bottom: 10%;
-      margin-top: 6%;
-  }
-  #contentInput{
-      margin-right: 9%;
-      margin-bottom: 6%;
-  }
-   #userInput{
-      height: 2.9em;
-      width:16em;
-      margin-bottom: 10%;
-  }
-  #greetingPageOne{
-    border-radius: 30px;
-    width:10em;
-    line-height: 1.3em;
-    font-size: 220% ;
-    justify-content: center;
+    #titlePageOne{
+        padding-top: 6%;
+        font: bolder 8.5vh Helvetica;
     }
+    .contentPageOne{
+        margin-top: 12%;
+    }
+    .descriptionPageOne{
+        font-size: 155% ;
+    }
+    #contentInput{
+        margin-bottom: 10%;
+        margin-top: 3%; 
+    }
+    #userInput{
+        height: 2.9em;
+        width:16em;  
+    }
+    #greetingPageOne{
+        border-radius: 30px;
+        width:35%;
+        line-height: 1.3em;
+        font-size: 220% ;
+        justify-content: center;
+        margin: auto;
+        margin-top: 18%;
+     }
     #buttonAccess{
-        height: 2.5em;
-        width:11em;
+        width:12em;
         border-radius: 30px;
         border: 3px solid white ;
         font-size: medium;
     }
 
 }
-@media screen and (max-width: 650px){
-  #greetingPageOne{
-    border-radius: 25px;
-    width:8em;
-    margin-left: 20%;
-    line-height: 1.1em;
-    font-size: 170% ;
-    justify-content: center;
-    margin-bottom: 10%;
+/*usando media queries para característica responsiva Historia 1 MAX-WIDTH 670PX*/
+@media screen and (max-width: 670px){
+    #greetingPageOne{
+         border-radius: 25px;
+         width:8em;
+         margin-left: auto;
+         line-height: 1.1em;
+         font-size: 180% ;
+         justify-content: center;
+         margin-top: 40%;
+         padding: 2% 2% 2% 2%;
     }
-
+    .contentPageOne{
+         margin-top: 14%;
+    }
+    #titlePageOne{
+         font: bolder 7.3vh Helvetica;
+         text-align: center;
+    }
+    .descriptionPageOne{
+         font-size: 130% ;
+         width:15em;
+         line-height: 1.5em;
+    }
+    #userInput{
+         height: 2.7em;
+         width:13.5em;
+         margin-bottom: 10%;
+    }
+    #buttonAccess{
+         height: 2.5em;
+         width:8.5em;
+         border-radius: 30px;
+         font-size: medium;
+    }
+    #contentPageTwo #storyThree > img{
+         height: 70%;
+         width: 60%;
+    }
+    #contentPageTwo #storyThree{
+         font-size:small
+    }
 }
-
+/*usando media queries para característica responsiva Historia 1 MAX-WIDTH 450PX*/
 @media screen and (max-width: 450px){
-  #titlePageOne{
-    font: bolder 7vh Helvetica;
-    text-align: center;
-    margin-bottom: 15%;
-  }
-  .descriptionPageOne{
-      font-size: 120% ;
-      width:15em;
-      line-height: 1.5em;
-      margin-right: 12%;
-  }
-  #contentInput{
-      margin-right: 1%;
-  }
-  #userInput{
-      height: 2.7em;
-      width:13.5em;
-      margin-bottom: 10%;
-  }
-  #buttonAccess{
-      height: 2.5em;
-      width:8.5em;
-      margin-bottom: 23%;
-      border-radius: 30px;
-      font-size: medium;
-  }
+    #titlePageOne{
+         font: bolder 7vh Helvetica;
+         text-align: center;
+         margin-bottom: 15%;
+    }
 }
-
-
 #pageTwo{
-    height: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
-    width: 100%;
-    background: url(fondo2.jpg) no-repeat center center;
-    background-size: cover;
-    overflow: scroll;
+ height: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
+ width: 100%;
+ background: url(img/fondo2.jpg) no-repeat center center;
+ background-size: cover;
+ overflow: scroll;
+}
+#pageTwo::-webkit-scrollbar{
+ display: none;
 }
 
-#pageTwo::-webkit-scrollbar{
-    display: none;
-}
 /* creando diseño para historia 3 */
 #headerPageTwo{
-    background-color:blanchedalmond;
-    height: 16%;
-    padding: 0 50px;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+ background-color:blanchedalmond;
+ height: 16%;
+ padding: 0 50px;
+ color: black;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ text-align: center;
 }
 #logo{
-    height: 80px;
-    width: 160px;
+ height: 80px;
+ width: 160px;
 }
-
 .show-menu,
 .hide-menu{
-    font-size: 40px;
-    cursor: pointer;
-    display: none;
-    transition: 0.4s;
+ font-size: 40px;
+ cursor: pointer;
+ display: none;
+ transition: 0.4s;
 }
-
 .show-menu{
-    order:1;
-
+ order:1;
 }
-
 .menu a:hover,
 .show-menu:hover,
 .hide-menu:hover{
@@ -248,22 +251,23 @@ body {
     float: none;
     z-index: 1000;
 }
+
 .menu ul li a:hover + ul, .menu ul li ul:hover {
     display: block;
 }
 
 #seeker{
-    width: 35%;
+    width: 30%;
     height: 6%;
     margin: 2%;
-    transform: translateX(90%);
+    transform: translateX(100%);
 }
 #seekerInput{
-    width: 80%;
+    width: 100%;
     height: 100%;
     border-radius: 10px;
     left: 3%;
-    border: 2px solid burlywood ;
+    border: 4px solid burlywood ;
     box-shadow: white 2px 2px 1.5px;
     padding-left: 3%;
 }
@@ -272,69 +276,75 @@ body {
     width: 22px;
     height: 25px;
     position: absolute;
-    right: 22% ;
-    top: 15%;
+    right: 3% ;
+    top: 22%;
     border: 0;
 }
-#buttonSearch{
-    width: 15%;
-    height: 100%;
-    border-radius: 10px;
-    position: absolute;
-    right: 3%;
-    background-color:blanchedalmond;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: 2px solid burlywood ;
-    box-shadow: white 2px 2px 1.5px;
-}
-
 #contentPageTwo{
     display: flex;
-    flex-direction:row-reverse ;
-    flex-wrap: wrap-reverse;
+    flex-direction:row ;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items:center;
+    padding-bottom: 0;
 }
-
-#contentPageTwo > div{
+#contentPageTwo > div{ /*vista 5 peliculas por fila, desorden, titulo, año*/
     width: 20%;
     text-align: center;
     margin-bottom: 6%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 1%;
- }
-
- img{
+}
+img{ /*todas las peliculas*/
     height: 180px;
     width: 130px;
      border-radius: 25px;
      border: 4px solid burlywood ;
      box-shadow: white 4px 4px 3px;
- }
+}
 
- #contentPageTwo > article{
+#contentPageTwo > article{
     width: 33.3%;
     text-align: center;
     margin-bottom: 4%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 1%;
- }
+}
 
- #contentPageTwo > article img{
+#contentPageTwo > article img{ /*productores y directores*/
     height: 200px;
     width: 160px;
     border-radius: 25px;
     border: 4px solid burlywood ;
     box-shadow: white 4px 4px 3px;
- }
+}
 
- #arrowBack{
-    height:10vh;
-    width:5vw;
-    margin-bottom: 80px;
-    margin-left: 45%;
- }
-
+#arrowBack{ /*flecha volver a historia 2*/
+    height: 8%;
+    width: 4em;
+    margin-bottom: 5%;
+    margin-left: 15%;
+}
+#counterOfPeople{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    flex-direction: column;
+    text-shadow: burlywood ;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#contentPageTwo > aside img{
+     width: 40%;
+     height: 25%;
+} 
+#contentPageTwo #storyThree > img{
+     height: 32%;
+     width: 28%;
+}
+ 
 /*RESPONSIVE*/
 @media(max-width: 768px){
     /*HEADER*/
@@ -368,26 +378,36 @@ body {
     .menu ul li a:hover + ul, .menu ul li ul:hover {
     display: block;
     transform: translateX(40%);/*cambia*/
-}
-
+    }
     .hide-menu{
         position: absolute;
         top: 40px;
         right: 40px;
     }
-    /* #check:checked ~ .menu{
-        right: 0 ;
-    } */
-
-    #contentPageTwo > div{
+    #contentPageTwo > div{ /*para todas las peliculas*/
         width: 50%;
         text-align: center;
         padding: 1%;
-     }
+    }
+    #contentPageTwo > article{ /*productores y directores*/
+        width: 50%;
+        text-align: center;
+        padding: 1%;
+    }
+     #arrowBack{ /*flecha volver a historia 2*/
+        height: 8%;
+        width: 4em;
+        margin-bottom: 5%;
+        margin-left: 5%;
+    }
+     #seeker{
+        width: 50%;
+        transform: translateX(50%);
+    }
     /*ocultar menu*/
-  .hideMenu{
-    display: none;
-  }
+    .hideMenu{
+     display: none;
+    }
 
 }
 
