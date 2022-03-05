@@ -6,6 +6,21 @@ const arrayFilms = data.films;
 /*flecha para volver a historia 2*/
 const arrowBack = document.getElementById("arrowBack");
 
+
+
+//CARRUSEL
+const accesPage1 = document.getElementById('buttonContinuar');
+accesPage1.addEventListener("click",hideCarrusel);
+function  hideCarrusel (){
+  document.getElementById("carrusel-container").style.display = "none";
+  showPageOne();
+}
+function showPageOne(){
+  document.getElementById("pageOne").style.display = "block";
+}
+
+
+
 //PRIMERA HISTORIA
 const buttonAccess = document.getElementById("buttonAccess");
 buttonAccess.addEventListener("click", showPage);
@@ -99,7 +114,7 @@ function filterDataByMovieTitleDesc() {
     filmsDiv.innerHTML = "";
     arrowBack.style.display= "none";
     filterDataByMovieTitleDesc()
-  });  
+  });
 }
 let buttonFilterByMovieTitleDesc = document.getElementById("filterDataByMovieTitleDesc");
 buttonFilterByMovieTitleDesc.addEventListener("click", filterDataByMovieTitleDesc);
@@ -376,3 +391,84 @@ function showPage3(filmsDisplay, arrayFilms) {
 
 
 
+
+
+// carrusel
+let indexUl = document.querySelector(".imgdiv ul");
+//etiqueta li
+let  indexLi=indexUl.querySelectorAll("li");
+let  lengthLi =indexLi.length;
+//el div más grande
+let pop = document.querySelector(".imgdiv");
+let lfspan=pop.querySelector('.lf');
+let rfspan=pop.querySelector('.rf');
+//Establecer los botones izquierdo y derecho al centro
+// lfspan.style.top=(parseInt(pop.offsetHeight)-60)/2+'px';
+// rfspan.style.top=(parseInt(pop.offsetHeight)-60)/2+'px';
+//Inicializar para obtener el ancho del marco de visualización
+let content_width=parseInt(pop.offsetWidth);
+//
+const TIME=2000;
+let timer;
+//
+//Configura el acumulador global para determinar qué imagen mover ****************
+let num=0;
+//Sigue el número de imágenes, establece dinámicamente el número de puntos
+let newsbigdiv=document.createElement('div');
+newsbigdiv.className='navigators';
+pop.appendChild(newsbigdiv);
+//Crea subdivs en un bucle, da a cada subdiv un estilo de clase y agrega un índice
+for(var i=0;i<lengthLi;i++){
+  let  newsdiv=document.createElement('div');
+  newsbigdiv.appendChild(newsdiv);
+  newsdiv.className="newsdiv";
+  newsdiv.setAttribute('index',i);//Establecer un valor de índice para cada subdiv.
+}
+//Obtenga el número de divisiones de puntos, desplace hacia la izquierda y muéstrelo en el centro
+let divsv = newsbigdiv.querySelectorAll('div');
+//El primero está resaltado por defecto
+divsv[0].style.opacity=1;
+//
+//
+function change(){
+  //Establece toda la transparencia de estilo de punto en 0.3
+  for(let j=0;j<lengthLi;j++){
+    divsv[j].style.opacity=0.3;
+  }
+  //Cambia el resaltado de puntos a la imagen con el índice actual como num
+  divsv[num].style.opacity=1;
+  indexUl.style.left=-num*100+'%';
+  //indexUl.classList.add('slide-1')
+}
+//
+for(let i=0;i<lengthLi;i++){
+  divsv[i].onclick=function(){
+    num=this.getAttribute('index');
+    change();
+  }
+}
+lfspan.onclick=function(){
+  num--;
+  if(num==-1){
+    num=lengthLi-1;
+  }
+  change();
+}
+rfspan.onclick=function(){
+  num++;
+  if(num==lengthLi){
+    num=0;
+  }
+  change();
+}
+//
+timer=setInterval(rfspan.onclick,TIME);
+//
+//Borra el temporizador cuando el mouse esté sobre la imagen
+pop.onmouseover=function(){
+  clearInterval(timer);
+}
+//Inicia el temporizador cuando el mouse sale del temporizador
+pop.onmouseout=function(){
+  timer=setInterval(rfspan.onclick,TIME);
+}

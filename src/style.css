@@ -334,7 +334,7 @@ body {
     margin-bottom: 80px;
     margin-left: 45%;
  }
- 
+
 /*RESPONSIVE*/
 @media(max-width: 768px){
     /*HEADER*/
@@ -390,6 +390,129 @@ body {
   }
 
 }
+
+
+
+/*carrusel*/
+
+.imgdiv ul li img{
+  /* Tamaño de la imagen */
+  width: 100%;
+  height:420px;
+}
+.carrusel-container{
+  height: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
+  width: 100%;
+  background: url(img/fondo2.jpg) no-repeat center center;
+  background-size: cover;
+  align-items: center;
+}
+/*carrusel*/
+/**{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+ul li{
+  list-style: none;
+}
+
+ul{
+  left: 0;
+}
+.navigators{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+}
+.imgdiv{
+  overflow: hidden;
+  height: 420px;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  position:relative;
+}
+.imgdiv > div{
+  width: 100%;
+}
+.imgdiv ul{
+  display:flex;
+  transition: left 1s linear;
+  position:absolute;
+  width: 400%;
+}
+.imgdiv ul.slide-1{
+  left: -100%;
+}
+.imgdiv ul li{
+  width: 25%;
+}
+.imgdiv span{
+  cursor:pointer;
+}
+.imgdiv span.lf{
+  position: absolute;
+  left: 10px;
+}
+.imgdiv span.rf{
+  position: absolute;
+  right: 10px;
+  transform: rotate(180deg);
+}
+.arrowDirectional{
+  top: 170px;
+}
+.arrowDirectional img{
+  width: 70px;
+  height: 70px;
+}
+
+.newsdiv{
+  width: 0;
+  height: 0;
+  border: 10px solid rgb(139, 138, 138);
+  border-radius: 50%;
+  margin:0 20px;
+  cursor:pointer;
+  opacity: 0.3;
+}
+
+
+.newsdiv{
+  width: 0;
+  height: 0;
+  border: 10px solid rgb(139, 138, 138);
+  border-radius: 50%; /* El cuadrado se convierte en un círculo */
+  margin:0 20px;
+  cursor:pointer; /* Ratón arriba y convertir en una mano pequeña */
+  opacity: 0.3; /* Transparencia inicial, modifique la transparencia a través de js para modificar su resaltado */
+}
+#arrowBack2{ /*flecha volver a historia 2*/
+  height: 8%;
+  width: 4em;
+  margin-bottom: 5%;
+  margin-left: 15%;
+  top: 150px;
+}
+
+#arrowNext{ /*flecha volver a historia 2*/
+  height: 8%;
+  width: 4em;
+  margin-bottom: 5%;
+  margin-left: 15%;
+  top: 150px;
+}
+
+.buttonContinuar {
+  background: blue;
+  height: 9%;
+  width: 12%;
+}
+
+/*//responsive*/
+/*  */
+/**/
 
 
 
