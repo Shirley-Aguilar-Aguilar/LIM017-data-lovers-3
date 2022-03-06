@@ -10,7 +10,40 @@
 </head>
 
 <body>
-    <section id="pageOne">
+
+
+<!--div carrusel-->
+<section id="carrusel-container" class="carrusel-container">
+  <div class="childCarruselContainer">
+    <div id="contentCarrusel"  class="imgdiv" >
+      <div>
+        <ul>
+          <li><img src="./img/totoroAmigos.jpg" alt=""></li>
+          <li><img src="./img/14.png" alt=""></li>
+          <li><img src="./img/3people.jpg" alt=""></li>
+          <li><img src="./img/niniocargando.png" alt=""></li>
+        </ul>
+        <span class="lf arrowDirectional" ><img src="img/arrowBack.png" > </span>
+
+        <span class="rf arrowDirectional" ><img src="img/arrowBack.png"></span>
+      </div>
+
+    </div>
+    <br>
+    <br>
+    <div>
+
+      <button id="buttonContinuar" class="buttonContinuar"> Continuar </button>
+
+    </div>
+  </div>
+
+
+</section>
+
+
+
+    <section id="pageOne" style="display:none;">
         <header id="titlePageOne">
             <h1> <strong> Studio Ghibli</strong> </h1>
         </header>
@@ -73,7 +106,7 @@
                             <li><a href="#" id="filterDataByRedelk" >Red elk</a></li>
                             <li><a href="#" id="filterDataBySpirit" >Spirit</a> </li>
                             <li><a href="#" id="filterDataByWolf"   >Wolf</a> </li>
-                            
+
                         </ul>
                     </li>
                 </ul>
@@ -93,6 +126,8 @@
         </main>
         <img src="img/arrowBack.png" style="display:none;" id="arrowBack">
     </section>
+
+
 
     <script src="main.js" type="module"></script>
 </body>
