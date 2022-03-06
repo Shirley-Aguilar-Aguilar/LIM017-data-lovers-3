@@ -34,7 +34,7 @@ body {
     justify-content: space-around;
     align-items:center ;
     flex-wrap: wrap-reverse;
-    width:calc(90%-10%);
+    width:calc(90% - 10%);
     margin: 10%;
 }
 .descriptionPageOne{
@@ -109,11 +109,11 @@ body {
     }
     #contentInput{
         margin-bottom: 10%;
-        margin-top: 3%; 
+        margin-top: 3%;
     }
     #userInput{
         height: 2.9em;
-        width:16em;  
+        width:16em;
     }
     #greetingPageOne{
         border-radius: 30px;
@@ -339,12 +339,12 @@ img{ /*todas las peliculas*/
 #contentPageTwo > aside img{
      width: 40%;
      height: 25%;
-} 
+}
 #contentPageTwo #storyThree > img{
      height: 32%;
      width: 28%;
 }
- 
+
 /*RESPONSIVE*/
 @media(max-width: 768px){
     /*HEADER*/
@@ -425,6 +425,7 @@ img{ /*todas las peliculas*/
   width: 100%;
   background: url(img/fondo2.jpg) no-repeat center center;
   background-size: cover;
+  display: flex;
   align-items: center;
 }
 /*carrusel*/
@@ -432,11 +433,11 @@ img{ /*todas las peliculas*/
 /*    margin: 0;*/
 /*    padding: 0;*/
 /*}*/
-ul li{
+.carrusel-container ul li{
   list-style: none;
 }
 
-ul{
+.carrusel-container ul{
   left: 0;
 }
 .navigators{
@@ -525,11 +526,22 @@ ul{
 }
 
 .buttonContinuar {
-  background: blue;
-  height: 9%;
-  width: 12%;
-}
+  /*height: 9%;*/
+  /*width: 12%;*/
+  height: 3em;
+  width:12em;
+  color :white;
+  margin-bottom: 10%;
+  border-radius: 40px;
+  background-color: rgb(101, 66, 182);
+  border: 4px solid white ;
+  font-size: large;
 
+}
+.childCarruselContainer{
+  width: 100%;
+  text-align: center;
+}
 /*//responsive*/
 /*  */
 /**/
