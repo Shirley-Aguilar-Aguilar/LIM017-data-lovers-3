@@ -9,15 +9,15 @@ describe('filterData', () => {
   });
 
   it('returns `filterData by title`', () => {
-    expect(filterData( data.films[0], "title")).toBe("Castle in the Sky");
+    expect(filterData( data.films, "Castle")instanceof Array).toBe(true);
   });
 
   it('returns `filterData by director `', () => {
-    expect(filterData(data.films[1], "director")).toBe("Hayao Miyazaki");
+    expect(filterData(data.films, "director")instanceof Array).toBe(true);
   });
 
   it('returns `filterData by release date`', () => {
-    expect(filterData(data.films[1],"release_date")).toBe("1988");
+    expect(filterData(data.films,"release_date")instanceof Array).toBe(true);
   });
 });
 
@@ -44,9 +44,14 @@ describe('sortData', () => {
     }
   });
 
-  it('returns `sortData`', () => {
-    expect(sortData()).toBe('OMG');
+  it('returns `sortData by producer descendente`', () => {
+    let sortedData = sortData(data.films, "producer", ORDER_DESCENDENTE);
+    for(let i = 0; i < sortedData.length - 1; i ++) {
+      //error("i:  " + sortedData[i].title + ", i + 1: " + sortedData[i+1].title);
+      expect(sortedData[i].producer >= sortedData[i+1].producer).toBe(true);
+    }
   });
+  
 });
 
 
@@ -57,16 +62,16 @@ describe('computeStats', () => {
     expect(typeof computeStats).toBe('function');
   });
 
-  it('returns `computeStats`', () => {
-    expect(computeStats()).toBe('OMG');
+  it('returns `computeStats by specie Human`', () => {
+    expect(computeStats(data.films,"Human")).toBe(129);
   });
 
-  it('returns `computeStats`', () => {
-    expect(computeStats()).toBe('OMG');
+  it('returns `computeStats by specie Totoro`', () => {
+    expect(computeStats(data.films,"Totoro")).toBe(3);
   });
 
-  it('returns `computeStats`', () => {
-    expect(computeStats()).toBe('OMG');
+  it('returns `computeStats by specie no exist`', () => {
+    expect(computeStats(data.films,"chair")).toBe(0);
   });
 });
 
