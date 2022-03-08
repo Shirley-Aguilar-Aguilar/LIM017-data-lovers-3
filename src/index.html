@@ -11,46 +11,32 @@
 
 <body>
 
-
-<!--div carrusel-->
-<section id="carrusel-container" class="carrusel-container">
-  <div class="childCarruselContainer">
-    <div id="contentCarrusel"  class="imgdiv" >
-      <div>
-        <ul>
-          <li><img src="./img/totoroAmigos.jpg" alt=""></li>
-          <li><img src="./img/14.png" alt=""></li>
-          <li><img src="./img/3people.jpg" alt=""></li>
-          <li><img src="./img/niniocargando.png" alt=""></li>
-        </ul>
-        <span class="lf arrowDirectional" ><img src="img/arrowBack.png" > </span>
-
-        <span class="rf arrowDirectional" ><img src="img/arrowBack.png"></span>
-      </div>
-
-    </div>
-    <br>
-    <br>
-    <div>
-
-      <button id="buttonContinuar" class="buttonContinuar"> Continuar </button>
-
-    </div>
-  </div>
-
-
-</section>
-
-
-
-    <section id="pageOne" style="display:none;">
+    <section id="pageOne">
         <header id="titlePageOne">
             <h1> <strong> Studio Ghibli</strong> </h1>
+
         </header>
         <main id="contentPageOne">
             <div class="descriptionPageOne">
                 <p>Esta página web brinda información sobre los largometrajes animados, creados y producidos en
                     el Studio Ghibli.</p>
+                <!--div carrusel-->
+                <section id="carrusel-container" class="carrusel-container">
+                    <div class="childCarruselContainer">
+                        <div id="contentCarrusel" class="imgdiv">
+                            <div>
+                                <ul>
+                                    <li><img src="./img/totoroAmigos.jpg" alt=""></li>
+                                    <li><img src="./img/14.png" alt=""></li>
+                                    <li><img src="./img/3people.jpg" alt=""></li>
+                                    <li><img src="./img/niniocargando.png" alt=""></li>
+                                </ul>
+                                <span class="lf arrowDirectional"></span>
+                                <span class="rf arrowDirectional"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
             <div id="contentInput">
                 <input id="userInput" type="text" placeholder=" Ingrese su nombre">
@@ -98,14 +84,14 @@
                     </li>
                     <li><a href="#">Número de<br>personajes</a>
                         <ul>
-                            <li><a href="#" id="filterDataByHuman"  >Human</a></li>
-                            <li><a href="#" id="filterDataByCats"   >Cat</a> </li>
+                            <li><a href="#" id="filterDataByHuman">Human</a></li>
+                            <li><a href="#" id="filterDataByCats">Cat</a> </li>
                             <li><a href="#" id="filterDataByTotoros">Totoros</a> </li>
-                            <li><a href="#" id="filterDataByWitch"  >Witch</a></li>
-                            <li><a href="#" id="filterDataByRaccon" >Raccon Dog</a></li>
-                            <li><a href="#" id="filterDataByRedelk" >Red elk</a></li>
-                            <li><a href="#" id="filterDataBySpirit" >Spirit</a> </li>
-                            <li><a href="#" id="filterDataByWolf"   >Wolf</a> </li>
+                            <li><a href="#" id="filterDataByWitch">Witch</a></li>
+                            <li><a href="#" id="filterDataByRaccon">Raccon Dog</a></li>
+                            <li><a href="#" id="filterDataByRedelk">Red elk</a></li>
+                            <li><a href="#" id="filterDataBySpirit">Spirit</a> </li>
+                            <li><a href="#" id="filterDataByWolf">Wolf</a> </li>
 
                         </ul>
                     </li>
@@ -119,7 +105,7 @@
 
         <div id="seeker">
             <input id="seekerInput" placeholder="Buscar por palabras claves">
-            <img id="searchLogo" src="img/search-logo.png" >
+            <img id="searchLogo" src="img/search-logo.png">
         </div>
 
         <main id="contentPageTwo">
