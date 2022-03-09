@@ -14,7 +14,7 @@ function showPage() {
   document.getElementById("greetingPageOne").style.display = "block";
   let inputName = document.getElementById("userInput").value;
   document.getElementById("userName").innerText = inputName;
-  setTimeout(showPage2, 1000);
+  setTimeout(showPage2, 3000);
 }
 function showPage2() {
   document.getElementById("pageOne").style.display = "none";
