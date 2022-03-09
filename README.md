@@ -34,7 +34,7 @@ al lado derecho.
 
 ## 2. Resumen del proyecto
 
-En este proyecto se diseño y construyo una interfaz web donde se puede visualizar y manipular data del Studio Ghibli. La data de peliculas del estudio es filtrada por medio de la funcion filterData, ordenada por medio de sortData y la funcion calculate muentra el calculo de personajes por especie.
+En este proyecto se diseño y construyo una interfaz web donde se puede visualizar y manipular data del Studio Ghibli. La data de peliculas del estudio es filtrada por medio de la funcion filterData, ordenada por medio de sortData y la funcion calculate muestra el calculo de personajes por especie.
 
 Data Usada: 
 
@@ -56,11 +56,11 @@ Revisar de la forma más didáctica posible, la información del Studio Ghibli.
 En base a los hallazgos de la investigación rápida se decidió que estos son los datos más relevantes para ver en la interfaz:
 
 - Películas: ¿Cuántas y cuáles son?
- * Título.
- * Descripción.
- * Fecha de lanzamiento.
- * Director y productor.
- * Personajes: ¿Cuántas y cuáles son?, características(nombre, edad, género, especie, etc).
+  * Título.
+  * Descripción.
+  * Fecha de lanzamiento.
+  * Director y productor.
+  * Personajes: Especies.
 - Especies que hay en cada animación.
 - Directores y productores.
   * En qué películas participaron y cuantas fueron.
@@ -68,7 +68,7 @@ En base a los hallazgos de la investigación rápida se decidió que estos son l
 Se mostrará la data mediante:
 - Navegador-sortData: ordenar de manera ascendente o descendente por año, director, productor y título.
 - Buscador-filterData: filtra la data en base a palabras clave.
-- En la parte principal de las películas, se mostrarán en el orden que aparecen en la data y tendam las siguientes caracteristias: nombre de la película,  fecha de lanzamiento, productor y director.
+- En la parte principal de las películas, se mostrarán en el orden que aparecen en la data y tendan las siguientes caracteristicas: nombre de la película, fecha de lanzamiento, productor y director.
 
 ### ¿Cuándo utilizan o utilizarían el producto?
 Cada vez que deseen ver la información mencionada anteriormente.
