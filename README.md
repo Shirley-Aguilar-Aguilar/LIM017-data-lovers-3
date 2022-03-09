@@ -82,6 +82,7 @@ Como: fanático del Studio Ghibli
 Quiero: Botón para acceder a la página
 Para: Ver la coleccion de peliculas animadas
 Boceto —-> Figma —-> HTML —-> JS —-> CSS
+
 Criterios de Aceptación:
 - Se muestra información general del Studio Ghibli.
 - El usuario puede ingresar su nombre en el campo de texto.
@@ -94,6 +95,7 @@ COMO: fanático del Studio Ghibli
 Quiero: Display de películas.
 PARA: Poder acceder a  la información de las animaciones.
 Boceto —-> Figma —-> HTML —-> JS —-> CSS
+
 Criterios de Aceptación:
 - Se muestran las películas en orden que están en la data.
 - Se muestra el póster de la película, el título, el director, el productor y año de lanzamiento.
@@ -104,6 +106,7 @@ COMO: fanático del Studio Ghibli
 Quiero: Un navegador donde se muestre las data por categorías.
 PARA: Poder acceder a la información de las animaciones.
 Boceto —-> Figma —-> HTML —-> JS —-> CSS
+
 Criterios de Aceptación:
 - Navegador asociado a la función sortData.
 - Navegador que permite mostrar películas(A-Z), director(A-Z),  año de publicación (descendente) y productor(A-Z).
@@ -115,6 +118,7 @@ COMO: fanático del Studio Ghibli
 Quiero: Un buscador que permite filtrar datos en base a palabras clave.
 PARA: Poder acceder a  la información de las animaciones.
 Boceto —-> Figma —-> HTML —-> JS —-> CSS
+
 Criterios de Aceptación:
 - Vista del buscador con un icono de búsqueda 
 - El buscador que permite encontrar películas por titulo, director, año de publicación y productor.
@@ -126,6 +130,7 @@ COMO: fanático del Studio Ghibli
 Quiero: Area del navegador para personajes.
 PARA: Poder acceder a la clasificacion de personajes por especies.
 Boceto —-> Figma —-> HTML —-> JS —-> CSS
+
 Criterios de Aceptación:
 - Área del navegador para el número de personajes por especies, asociada a la función calculate.
 - Muestra el número de Humans, Totoros, Witches,... 
@@ -137,6 +142,7 @@ COMO: fanático del Studio Ghibli
 Quiero: dar click sobre las portadas.
 PARA: Ver la información de las películas mostradas/encontradas.
 Boceto —-> Figma —-> HTML —-> JS —-> CSS
+
 Criterios de Aceptación:
 - Se muestra la información de la película seleccionada.
 - Vista de poster, titulo, año de publicacion, director, productor y descripcion.
