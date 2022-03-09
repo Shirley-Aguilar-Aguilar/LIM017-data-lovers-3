@@ -46,13 +46,13 @@ Data Usada:
 
 ## 3. Definición de producto
 
-## ¿Quiénes son los principales usuarios del producto?
+### ¿Quiénes son los principales usuarios del producto?
 Los admiradores de Studio Ghibli, que desean ver información relacionada a sus películas.
 
-## ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
+### ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 Revisar de la forma más didáctica posible, la información del Studio Ghibli.
 
-## ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
+### ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 En base a los hallazgos de la investigación rápida se decidió que estos son los datos más relevantes para ver en la interfaz:
 
 - Películas: ¿Cuántas y cuáles son?
@@ -70,7 +70,7 @@ Se mostrará la data mediante:
 - Buscador-filterData: filtra la data en base a palabras clave.
 - En la parte principal de las películas, se mostrarán en el orden que aparecen en la data y tendam las siguientes caracteristias: nombre de la película,  fecha de lanzamiento, productor y director.
 
-## ¿Cuándo utilizan o utilizarían el producto?
+### ¿Cuándo utilizan o utilizarían el producto?
 Cada vez que deseen ver la información mencionada anteriormente.
 
 
@@ -79,8 +79,11 @@ Cada vez que deseen ver la información mencionada anteriormente.
 ### Historia 1
 
 Como: fanático del Studio Ghibli
+
 Quiero: Botón para acceder a la página
+
 Para: Ver la coleccion de peliculas animadas
+
 Boceto —-> Figma —-> HTML —-> JS —-> CSS
 
 Criterios de Aceptación:
@@ -92,8 +95,11 @@ Criterios de Aceptación:
 ### Historia 2
 
 COMO: fanático del Studio Ghibli
+
 Quiero: Display de películas.
-PARA: Poder acceder a  la información de las animaciones.
+
+PARA: Poder acceder a  la información de las animaciones
+
 Boceto —-> Figma —-> HTML —-> JS —-> CSS
 
 Criterios de Aceptación:
@@ -103,8 +109,11 @@ Criterios de Aceptación:
 ### Historia 3
 
 COMO: fanático del Studio Ghibli
+
 Quiero: Un navegador donde se muestre las data por categorías.
+
 PARA: Poder acceder a la información de las animaciones.
+
 Boceto —-> Figma —-> HTML —-> JS —-> CSS
 
 Criterios de Aceptación:
@@ -115,8 +124,11 @@ Criterios de Aceptación:
 ### Historia 4
 
 COMO: fanático del Studio Ghibli
+
 Quiero: Un buscador que permite filtrar datos en base a palabras clave.
+
 PARA: Poder acceder a  la información de las animaciones.
+
 Boceto —-> Figma —-> HTML —-> JS —-> CSS
 
 Criterios de Aceptación:
@@ -127,8 +139,11 @@ Criterios de Aceptación:
 ### Historia 5
 
 COMO: fanático del Studio Ghibli
+
 Quiero: Area del navegador para personajes.
+
 PARA: Poder acceder a la clasificacion de personajes por especies.
+
 Boceto —-> Figma —-> HTML —-> JS —-> CSS
 
 Criterios de Aceptación:
@@ -139,8 +154,11 @@ Criterios de Aceptación:
 ### Historia 6: Display de cada película
 
 COMO: fanático del Studio Ghibli
+
 Quiero: dar click sobre las portadas.
+
 PARA: Ver la información de las películas mostradas/encontradas.
+
 Boceto —-> Figma —-> HTML —-> JS —-> CSS
 
 Criterios de Aceptación:
