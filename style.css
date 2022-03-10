@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* how padding and border are added to the element,
+  content box adds to the orginal size
+  border box mantains the original size*/
+}
+body {
+    height: 100vh;
+    width: 100vw;/* 100% visible part of the page
+    vh = 1% viewpoint height or avaliable height space,
+    vw = 1% viewpoint width*/
+}
+#pageOne{
+    background: url(img/fondo1.jpg) no-repeat center center; /* la imagen a ser mostrada a pantalla completa */
+    height: 100%;
+    width: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
+    background-size: cover; /* Propiedad a utilizar para la imagen */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: scroll;
+}
+#pageOne::-webkit-scrollbar{
+    display: none;
+}
+
+#titlePageOne{
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+    -webkit-text-stroke: 2px rgb(26, 83, 26) ;
+    font: bolder 8.2vh Helvetica;
+    text-shadow: rgb(25, 104, 25) 5px 4px 3px;
+}
+
+#contentPageOne{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-around;
+    align-items:center ;
+    flex-wrap: wrap-reverse;
+    width:calc(90% - 10%);
+    margin: 5% 10%;
+}
+.descriptionPageOne{
+    border-color: green ;
+    background-color: white;
+    font-size: 200% ;
+    text-align: center;
+    color: black;
+    width:16em;
+    border-radius: 30px;
+    border: 3px solid green;
+    box-shadow: rgb(25, 104, 25) 3px 3px 3px;;
+    padding: 1%;
+    line-height: 1.7em;
+}
+
+#contentInput{
+    display: flex;
+    flex-wrap:wrap-reverse;
+    flex-direction:column ;
+    justify-content: space-between;
+    align-items:center ;
+}
+#userInput{
+    height: 3.5em;
+    width:23em;
+    margin-bottom: 10%;
+    border-radius: 40px;
+    text-align: center;
+    border: 2px solid green;
+    box-shadow: rgb(25, 104, 25) 3px 3px 3px;
+    font-size: larger;
+}
+#buttonAccess{
+    height: 3em;
+    width:12em;
+    color :white;
+    margin-bottom: 10%;
+    border-radius: 40px;
+    background-color: rgb(101, 66, 182);
+    border: 4px solid white ;
+    font-size: large;
+}
+#greetingPageOne{
+    display: flex;
+    flex-direction:column ;
+    align-items:center ;
+    border-color: green ;
+    border-radius: 40px;
+    color: rgb(13, 70, 13);
+    width:14em;
+    padding: 2% 2% 2% 2%;
+    margin-left: 33%;
+    line-height: 1.7em;
+    background-color: white;
+    font-size: 250% ;
+    color: black;
+    margin-top: 10%;
+}
+
+/*usando media queries para característica responsiva Historia 1 MAX-WIDTH 1400PX*/
+@media screen and (max-width: 1400px){
+    #titlePageOne{
+        padding-top: 6%;
+        font: bolder 8.5vh Helvetica;
+    }
+    .contentPageOne{
+        margin-top: 12%;
+    }
+    .descriptionPageOne{
+        font-size: 155% ;
+    }
+    #contentInput{
+        margin-bottom: 10%;
+        margin-top: 3%;
+    }
+    #userInput{
+        height: 2.9em;
+        width:16em;
+    }
+    #greetingPageOne{
+        border-radius: 30px;
+        width:35%;
+        line-height: 1.3em;
+        font-size: 220% ;
+        justify-content: center;
+        margin: auto;
+        margin-top: 18%;
+     }
+    #buttonAccess{
+        width:12em;
+        border-radius: 30px;
+        border: 3px solid white ;
+        font-size: medium;
+    }
+
+}
+/*usando media queries para característica responsiva Historia 1 MAX-WIDTH 670PX*/
+@media screen and (max-width: 670px){
+    #greetingPageOne{
+         border-radius: 25px;
+         width:8em;
+         margin-left: auto;
+         line-height: 1.1em;
+         font-size: 180% ;
+         justify-content: center;
+         margin-top: 40%;
+         padding: 2% 2% 2% 2%;
+    }
+    .contentPageOne{
+         margin-top: 14%;
+    }
+    #titlePageOne{
+         font: bolder 7.3vh Helvetica;
+         text-align: center;
+    }
+    .descriptionPageOne{
+         font-size: 130% ;
+         width:15em;
+         line-height: 1.5em;
+    }
+    #userInput{
+         height: 2.7em;
+         width:13.5em;
+         margin-bottom: 10%;
+    }
+    #buttonAccess{
+         height: 2.5em;
+         width:8.5em;
+         border-radius: 30px;
+         font-size: medium;
+    }
+    #contentPageTwo #storyThree > img{
+         height: 70%;
+         width: 60%;
+    }
+    #contentPageTwo #storyThree{
+         font-size:small
+    }
+}
+/*usando media queries para característica responsiva Historia 1 MAX-WIDTH 450PX*/
+@media screen and (max-width: 450px){
+    #titlePageOne{
+         font: bolder 7vh Helvetica;
+         text-align: center;
+         margin-bottom: 15%;
+    }
+}
+#pageTwo{
+ height: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
+ width: 100%;
+ background: url(img/fondo2.jpg) no-repeat center center;
+ background-size: cover;
+ overflow: scroll;
+}
+#pageTwo::-webkit-scrollbar{
+ display: none;
+}
+
+/* creando diseño para historia 3 */
+#headerPageTwo{
+ background-color:blanchedalmond;
+ height: 16%;
+ padding: 0 50px;
+ color: black;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ text-align: center;
+}
+#logo{
+ height: 80px;
+ width: 160px;
+}
+.show-menu,
+.hide-menu{
+ font-size: 40px;
+ cursor: pointer;
+ display: none;
+ transition: 0.4s;
+}
+.show-menu{
+ order:1;
+}
+.menu a:hover,
+.show-menu:hover,
+.hide-menu:hover{
+    color:#CC673B;
+}
+
+#check{
+    display: none;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: #191C26;
+    padding: 5px 10px;
+    /* background-color:blanchedalmond; */
+}
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    min-width: 120px;
+    max-width: 160px;
+    background-color: sandybrown;
+    float: none;
+    z-index: 1000;
+}
+
+.menu ul li a:hover + ul, .menu ul li ul:hover {
+    display: block;
+}
+
+#seeker{
+    width: 30%;
+    height: 6%;
+    margin: 2%;
+    transform: translateX(100%);
+}
+#seekerInput{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    left: 3%;
+    border: 4px solid burlywood ;
+    box-shadow: white 2px 2px 1.5px;
+    padding-left: 3%;
+}
+
+#searchLogo{
+    width: 22px;
+    height: 25px;
+    position: absolute;
+    right: 3% ;
+    top: 22%;
+    border: 0;
+}
+#contentPageTwo{
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:center;
+    padding-bottom: 0;
+}
+#contentPageTwo > div{ /*vista 5 peliculas por fila, desorden, titulo, año*/
+    width: 20%;
+    text-align: center;
+    margin-bottom: 6%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1%;
+}
+img{ /*todas las peliculas*/
+    height: 180px;
+    width: 130px;
+     border-radius: 25px;
+     border: 4px solid burlywood ;
+     box-shadow: white 4px 4px 3px;
+}
+
+#contentPageTwo > article{
+    width: 33.3%;
+    text-align: center;
+    margin-bottom: 4%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1%;
+}
+
+#contentPageTwo > article img{ /*productores y directores*/
+    height: 200px;
+    width: 160px;
+    border-radius: 25px;
+    border: 4px solid burlywood ;
+    box-shadow: white 4px 4px 3px;
+}
+
+#arrowBack{ /*flecha volver a historia 2*/
+    height: 8%;
+    width: 4em;
+    margin-bottom: 5%;
+    margin-left: 15%;
+}
+#counterOfPeople{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    flex-direction: column;
+    text-shadow: burlywood ;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#contentPageTwo > aside img{
+     width: 40%;
+     height: 25%;
+}
+#contentPageTwo #storyThree > img{
+     height: 32%;
+     width: 28%;
+}
+
+/*RESPONSIVE*/
+@media(max-width: 768px){
+    /*HEADER*/
+    .show-menu,
+    .hide-menu{
+        display: block;
+
+    }
+    .menu{
+        position: fixed;
+        width:100%;
+        height: 100vh;
+        background-color: blanchedalmond;
+        left: 0 ;
+        /* right:-100%;*/
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index:100;
+        transition:0.8s;
+    }
+    .menu ul{
+        display: inline-block;
+    }
+    .menu ul li ul {
+        display: none;
+        position: relative;
+        width: 110px; /*cambia*/
+        background-color: sandybrown;
+    }
+    .menu ul li a:hover + ul, .menu ul li ul:hover {
+    display: block;
+    transform: translateX(40%);/*cambia*/
+    }
+    .hide-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #contentPageTwo > div{ /*para todas las peliculas*/
+        width: 50%;
+        text-align: center;
+        padding: 1%;
+    }
+    #contentPageTwo > article{ /*productores y directores*/
+        width: 50%;
+        text-align: center;
+        padding: 1%;
+    }
+     #arrowBack{ /*flecha volver a historia 2*/
+        height: 8%;
+        width: 4em;
+        margin-bottom: 5%;
+        margin-left: 5%;
+    }
+     #seeker{
+        width: 50%;
+        transform: translateX(50%);
+    }
+    /*ocultar menu*/
+    .hideMenu{
+     display: none;
+    }
+
+}
+
+
+
+/*carrusel*/
+
+.imgdiv ul li img{
+  /* Tamaño de la imagen */
+  width: 100%;
+  height: 150px;
+}
+.carrusel-container{
+  height: 100%; /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
+  width: 100%;
+  /*background: url(img/fondo2.jpg) no-repeat center center;*/
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
+.carrusel-container ul li{
+  list-style: none;
+}
+
+.carrusel-container ul{
+  left: 0;
+}
+.navigators{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+}
+.imgdiv{
+  overflow: hidden;
+  height: 150px;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  position:relative;
+}
+.imgdiv > div{
+  width: 100%;
+}
+.imgdiv ul{
+  display:flex;
+  transition: left 1s linear;
+  position:absolute;
+  width: 400%;
+}
+.imgdiv ul.slide-1{
+  left: -100%;
+}
+.imgdiv ul li{
+  width: 25%;
+}
+.imgdiv span{
+  cursor:pointer;
+}
+.imgdiv span.lf{
+  position: absolute;
+  left: 10px;
+}
+.imgdiv span.rf{
+  position: absolute;
+  right: 10px;
+  transform: rotate(180deg);
+}
+.arrowDirectional{
+  top: 45%;
+}
+.arrowDirectional img{
+  width: 25px;
+  height: 26px;
+  box-shadow: none;
+}
+
+.newsdiv{
+  width: 0;
+  height: 0;
+  border: 5px solid rgb(139, 138, 138);
+  border-radius: 50%;
+  margin:0 20px;
+  cursor:pointer;
+  opacity: 0.3;
+}
+
+
+.newsdiv{
+  width: 0;
+  height: 0;
+  border: 5px solid rgb(139, 138, 138);
+  border-radius: 50%; /* El cuadrado se convierte en un círculo */
+  margin:0 20px;
+  cursor:pointer; /* Ratón arriba y convertir en una mano pequeña */
+  opacity: 0.3; /* Transparencia inicial, modifique la transparencia a través de js para modificar su resaltado */
+}
+#arrowBack2{ /*flecha volver a historia 2*/
+  height: 8%;
+  width: 4em;
+  margin-bottom: 5%;
+  margin-left: 15%;
+  top: 150px;
+}
+
+#arrowNext{ /*flecha volver a historia 2*/
+  height: 8%;
+  width: 4em;
+  margin-bottom: 5%;
+  margin-left: 15%;
+  top: 150px;
+}
+
+.childCarruselContainer{
+  width: 100%;
+  text-align: center;
+}
+/*//responsive*/
+/*  */
+/**/
+
+
+
+
+/*especificidad
+++++ style in line
++++id selector(#id)
+++class selector, atribute selector y pseudo-class
++element selector or pseudo-element*/
