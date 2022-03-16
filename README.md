@@ -226,7 +226,7 @@ Criterios de Aceptación:
 
 ### Objetivos de aprendizaje
 
-* Carol
+* [Carol] (https://www.notion.so/ca0aee73e9d445f184dfb6e79e082218?v=59cfd86dad2641e693fc1a4955fca362)
 * [Shirley](https://fortunate-burst-cdb.notion.site/0ab6a628cb9f49f990841587cf251cdf?v=b235a3767cc94fde88cffa59623f8728)
 * [Yaisa](https://yaisa.notion.site/88b7358f470a447c8ffe5d65510e9ef2?v=c442f23fd8e74968a154d30a8d8b4836)
 
