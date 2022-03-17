@@ -8,7 +8,7 @@ export default {
       "director": "Hayao Miyazaki",
       "producer": "Isao Takahata",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg",
-      "posterDirector":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
+      "posterDirector":"https://upload.wikimedia.org/wikipedia/commons/e/ef/Hayao_Miyazaki.jpg",
       "posterProducer": "https://ramenparados.com/wp-content/uploads/2019/06/takahata-300x450.jpg",
       "release_date": "1986",
       "rt_score": "95",
@@ -213,7 +213,7 @@ export default {
       "producer": "Hayao Miyazaki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/d/db/My_Neighbor_Totoro.jpg",
       "posterDirector":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
-      "posterProducer":"https://rialta.org/wp-content/uploads/2021/11/hayao-miyazaki.jpg",
+      "posterProducer":"https://upload.wikimedia.org/wikipedia/commons/e/ef/Hayao_Miyazaki.jpg",
       "release_date": "1988",
       "rt_score": "93",
       "people": [
